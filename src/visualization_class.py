@@ -11,7 +11,8 @@ from std_msgs.msg import Header, ColorRGBA
 from visualization_msgs.msg import Marker, MarkerArray
 from geometry_msgs.msg import Pose, PoseArray
 from geometry_msgs.msg import Point
-
+from nav_msgs.msg import Odometry
+from cola2_msgs.msg import DVL
 
 class Visualization:
     """
@@ -20,10 +21,7 @@ class Visualization:
        
     def __init__(self):
        
-        ## \brief Subscriber to the odometry topic, used to get the current position
-        self.odom_subscriber = rospy.Subscriber('/girona500/navigator/odometry', Odometry, self.odometry_callback) 
-        ## \brief Subscriber to the DVL topic, used to get the current velocity
-        self.dvl_subscriber = rospy.Subscriber('/girona500/navigator/dvl', DVL, self.dvl_callback)
+       
         ## \brief Publisher for the visualization of the centroids and normals of the octomap
         self.centroids_normals_publisher = rospy.Publisher('visualization_centroids_normals', MarkerArray, queue_size=100)
         ## \brief Publisher for the current point cloud

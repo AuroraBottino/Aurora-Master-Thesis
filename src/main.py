@@ -293,8 +293,7 @@ class PointCloudFeatureMatcher:
         robotbase_T_camerabase[:3,3] = translation_vector
         point0_T_camerabase = np.dot(cam_world_pose,robotbase_T_camerabase)
         self.points_on_auv[0,:] = point0_T_camerabase[:3, 3]
-        _
-
+        
         #Point1 on AUV
         point1_T_camerabase = np.eye(4)
         translation_vector1 = np.array([-0.83, 0.5, -1.34])
