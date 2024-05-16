@@ -1,0 +1,326 @@
+\hypertarget{classfeaturematching__calculator_1_1_feature_matching_calculator}{}\doxysection{featurematching\+\_\+calculator.\+Feature\+Matching\+Calculator Class Reference}
+\label{classfeaturematching__calculator_1_1_feature_matching_calculator}\index{featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classfeaturematching__calculator_1_1_feature_matching_calculator_a154932a412d198c02e87f74146daa515}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classfeaturematching__calculator_1_1_feature_matching_calculator_ab6a4d203c4ceda8e084ef5d7c7580a7f}{cayley2hom}} (self, cayley\+Params)
+\item 
+def \mbox{\hyperlink{classfeaturematching__calculator_1_1_feature_matching_calculator_a608f2644b0f9595f5e6e99075a118a3e}{cayley2rot}} (self, cay\+Param\+In)
+\item 
+def \mbox{\hyperlink{classfeaturematching__calculator_1_1_feature_matching_calculator_ab3ee18bdaeb207cb42578a126810d5e7}{extract\+\_\+descriptors}} (self, msg)
+\item 
+def \mbox{\hyperlink{classfeaturematching__calculator_1_1_feature_matching_calculator_a5039d1a0e26d65ebfd5aac937267a658}{euclidean\+\_\+distance}} (self, pt1, pt2)
+\item 
+def \mbox{\hyperlink{classfeaturematching__calculator_1_1_feature_matching_calculator_a4988fe1e3a7a9a1196319ef9ce2ba4ce}{calculate\+\_\+mean\+\_\+distance}} (self, pt1s, pt2s)
+\item 
+def \mbox{\hyperlink{classfeaturematching__calculator_1_1_feature_matching_calculator_ab3242060cdd5ea2231b777e49a96fd52}{calculate\+\_\+mean\+\_\+points}} (self, valid\+\_\+pt1s, valid\+\_\+pt2s)
+\item 
+def \mbox{\hyperlink{classfeaturematching__calculator_1_1_feature_matching_calculator_a9b26c02f2d32d3e86c051a9b0ee6a7f3}{odometry\+\_\+callback}} (self, msg)
+\item 
+def \mbox{\hyperlink{classfeaturematching__calculator_1_1_feature_matching_calculator_a4f30516fe7f3ae567bb5df0b504ca6d5}{dvl\+\_\+callback}} (self, msg)
+\item 
+def \mbox{\hyperlink{classfeaturematching__calculator_1_1_feature_matching_calculator_a1337cd786ec4083c08a7d76218a3e554}{matching}} (self, current\+\_\+descriptors, current\+\_\+keypoints, current\+\_\+points\+\_\+3d, last\+\_\+points\+\_\+3d, last\+\_\+descriptors, last\+\_\+keypoints)
+\item 
+def \mbox{\hyperlink{classfeaturematching__calculator_1_1_feature_matching_calculator_a01af9077d354fbe42b92e5263b2417d0}{pnp\+\_\+ransac}} (self, pt\+\_\+2d\+\_\+current\+\_\+vector, pt\+\_\+2d\+\_\+previous\+\_\+vector, pt\+\_\+3d\+\_\+current\+\_\+vector, pt\+\_\+3d\+\_\+previous\+\_\+vector, \mbox{\hyperlink{classfeaturematching__calculator_1_1_feature_matching_calculator_a33a168311052af5fca518090e61e0806}{intrinsic\+\_\+matrices}})
+\item 
+def \mbox{\hyperlink{classfeaturematching__calculator_1_1_feature_matching_calculator_af52e2f18717a3155603794a44b08016e}{reprojection\+\_\+error}} (self, model\+\_\+points\+\_\+previous, image\+\_\+points\+\_\+current, model\+\_\+points\+\_\+current, image\+\_\+points\+\_\+previous, rvec, tvec, \mbox{\hyperlink{classfeaturematching__calculator_1_1_feature_matching_calculator_a33a168311052af5fca518090e61e0806}{intrinsic\+\_\+matrices}}, current\+\_\+cam\+\_\+\+T\+\_\+world, last\+\_\+cam\+\_\+\+T\+\_\+world)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfeaturematching__calculator_1_1_feature_matching_calculator_ad8d5fb66500c7169304f470fd4d1557c}{bf}}
+\begin{DoxyCompactList}\small\item\em Variable to store the B\+F\+Matcher, used in the feature matching process (see function matching in \mbox{\hyperlink{featurematching__calculator_8py}{featurematching\+\_\+calculator.\+py}}) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfeaturematching__calculator_1_1_feature_matching_calculator_af30f0ed6647511cce8c1bd0820911ef2}{threshold\+\_\+distance}}
+\begin{DoxyCompactList}\small\item\em Variable to store the threshold for the Euclidean distance between 3D points, used to filter the matches. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfeaturematching__calculator_1_1_feature_matching_calculator_a6aa746c458be9d2a58c9dc39fbca0784}{reprojection\+\_\+threshold}}
+\begin{DoxyCompactList}\small\item\em Variable to store reprojection threshold, used to filter valid 3D points. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfeaturematching__calculator_1_1_feature_matching_calculator_a880f945e7f2da35be1dc9412375fdd51}{current\+\_\+position}}
+\item 
+\mbox{\hyperlink{classfeaturematching__calculator_1_1_feature_matching_calculator_a178f63bb426ce7300fe014be42e3a3c8}{current\+\_\+velocity}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfeaturematching__calculator_1_1_feature_matching_calculator_acb21bcfae01f24735714592e7bd2afbd}{camera\+\_\+params}}
+\item 
+\mbox{\hyperlink{classfeaturematching__calculator_1_1_feature_matching_calculator_a6d3c43f09b661582133e6367c8cace05}{robot\+\_\+points}}
+\item 
+\mbox{\hyperlink{classfeaturematching__calculator_1_1_feature_matching_calculator_a33a168311052af5fca518090e61e0806}{intrinsic\+\_\+matrices}}
+\item 
+\mbox{\hyperlink{classfeaturematching__calculator_1_1_feature_matching_calculator_a0ee9d729410dad27c10cb4dfa14c9c97}{fx}} = self.\+camera\+\_\+params\mbox{[}f\textquotesingle{}Camera\+\_\+pinhole\+\_\+fx\+\_\+cam\{i\}\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{classfeaturematching__calculator_1_1_feature_matching_calculator_a9a3c91f8f98ade31c0dbcc5ec692b9fc}{fy}} = self.\+camera\+\_\+params\mbox{[}f\textquotesingle{}Camera\+\_\+pinhole\+\_\+fy\+\_\+cam\{i\}\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{classfeaturematching__calculator_1_1_feature_matching_calculator_a752ab149258c0cf11dfe65013f29a8c8}{cx}} = self.\+camera\+\_\+params\mbox{[}f\textquotesingle{}Camera\+\_\+pinhole\+\_\+px\+\_\+cam\{i\}\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{classfeaturematching__calculator_1_1_feature_matching_calculator_a00a71a0cc7cf7724cac8eb1f9e366059}{cy}} = self.\+camera\+\_\+params\mbox{[}f\textquotesingle{}Camera\+\_\+pinhole\+\_\+py\+\_\+cam\{i\}\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{classfeaturematching__calculator_1_1_feature_matching_calculator_a8cb6c32aa57fa44596f074a6fe579889}{extrinsic\+\_\+matrices}}
+\item 
+list \mbox{\hyperlink{classfeaturematching__calculator_1_1_feature_matching_calculator_ac877a4d4207e4bf0b90b63de46fb7bcd}{params}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}This node implements the feature matching algorithm, the PnP RANSAC algorithm and the reprojection error algorithm
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classfeaturematching__calculator_1_1_feature_matching_calculator_a154932a412d198c02e87f74146daa515}\label{classfeaturematching__calculator_1_1_feature_matching_calculator_a154932a412d198c02e87f74146daa515}} 
+\index{featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def featurematching\+\_\+calculator.\+Feature\+Matching\+Calculator.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classfeaturematching__calculator_1_1_feature_matching_calculator_a4988fe1e3a7a9a1196319ef9ce2ba4ce}\label{classfeaturematching__calculator_1_1_feature_matching_calculator_a4988fe1e3a7a9a1196319ef9ce2ba4ce}} 
+\index{featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}!calculate\_mean\_distance@{calculate\_mean\_distance}}
+\index{calculate\_mean\_distance@{calculate\_mean\_distance}!featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}}
+\doxysubsubsection{\texorpdfstring{calculate\_mean\_distance()}{calculate\_mean\_distance()}}
+{\footnotesize\ttfamily def featurematching\+\_\+calculator.\+Feature\+Matching\+Calculator.\+calculate\+\_\+mean\+\_\+distance (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{pt1s,  }\item[{}]{pt2s }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function to compute the mean distance between two sets of 3D points
+Return: A numpy array of the mean distance
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classfeaturematching__calculator_1_1_feature_matching_calculator_ab3242060cdd5ea2231b777e49a96fd52}\label{classfeaturematching__calculator_1_1_feature_matching_calculator_ab3242060cdd5ea2231b777e49a96fd52}} 
+\index{featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}!calculate\_mean\_points@{calculate\_mean\_points}}
+\index{calculate\_mean\_points@{calculate\_mean\_points}!featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}}
+\doxysubsubsection{\texorpdfstring{calculate\_mean\_points()}{calculate\_mean\_points()}}
+{\footnotesize\ttfamily def featurematching\+\_\+calculator.\+Feature\+Matching\+Calculator.\+calculate\+\_\+mean\+\_\+points (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{valid\+\_\+pt1s,  }\item[{}]{valid\+\_\+pt2s }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function to compute the mean points between two sets of 3D points
+Return: The mean points
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classfeaturematching__calculator_1_1_feature_matching_calculator_ab6a4d203c4ceda8e084ef5d7c7580a7f}\label{classfeaturematching__calculator_1_1_feature_matching_calculator_ab6a4d203c4ceda8e084ef5d7c7580a7f}} 
+\index{featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}!cayley2hom@{cayley2hom}}
+\index{cayley2hom@{cayley2hom}!featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}}
+\doxysubsubsection{\texorpdfstring{cayley2hom()}{cayley2hom()}}
+{\footnotesize\ttfamily def featurematching\+\_\+calculator.\+Feature\+Matching\+Calculator.\+cayley2hom (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cayley\+Params }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Converts Cayley parameters to a homogeneous matrix
+return: A 4x4 homogeneous matrix
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classfeaturematching__calculator_1_1_feature_matching_calculator_a608f2644b0f9595f5e6e99075a118a3e}\label{classfeaturematching__calculator_1_1_feature_matching_calculator_a608f2644b0f9595f5e6e99075a118a3e}} 
+\index{featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}!cayley2rot@{cayley2rot}}
+\index{cayley2rot@{cayley2rot}!featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}}
+\doxysubsubsection{\texorpdfstring{cayley2rot()}{cayley2rot()}}
+{\footnotesize\ttfamily def featurematching\+\_\+calculator.\+Feature\+Matching\+Calculator.\+cayley2rot (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cay\+Param\+In }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Converts Cayley parameters to a rotation matrix
+return: A 3x3 rotation matrix
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classfeaturematching__calculator_1_1_feature_matching_calculator_a4f30516fe7f3ae567bb5df0b504ca6d5}\label{classfeaturematching__calculator_1_1_feature_matching_calculator_a4f30516fe7f3ae567bb5df0b504ca6d5}} 
+\index{featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}!dvl\_callback@{dvl\_callback}}
+\index{dvl\_callback@{dvl\_callback}!featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}}
+\doxysubsubsection{\texorpdfstring{dvl\_callback()}{dvl\_callback()}}
+{\footnotesize\ttfamily def featurematching\+\_\+calculator.\+Feature\+Matching\+Calculator.\+dvl\+\_\+callback (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Callback function for the DVL topic, used to get the current velocity
+Args:
+    msg: The message containing the DVL data
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classfeaturematching__calculator_1_1_feature_matching_calculator_a5039d1a0e26d65ebfd5aac937267a658}\label{classfeaturematching__calculator_1_1_feature_matching_calculator_a5039d1a0e26d65ebfd5aac937267a658}} 
+\index{featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}!euclidean\_distance@{euclidean\_distance}}
+\index{euclidean\_distance@{euclidean\_distance}!featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}}
+\doxysubsubsection{\texorpdfstring{euclidean\_distance()}{euclidean\_distance()}}
+{\footnotesize\ttfamily def featurematching\+\_\+calculator.\+Feature\+Matching\+Calculator.\+euclidean\+\_\+distance (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{pt1,  }\item[{}]{pt2 }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function to compute the Euclidean distance between two 3D points
+Return: A numpy array of the Euclidean distance
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classfeaturematching__calculator_1_1_feature_matching_calculator_ab3ee18bdaeb207cb42578a126810d5e7}\label{classfeaturematching__calculator_1_1_feature_matching_calculator_ab3ee18bdaeb207cb42578a126810d5e7}} 
+\index{featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}!extract\_descriptors@{extract\_descriptors}}
+\index{extract\_descriptors@{extract\_descriptors}!featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}}
+\doxysubsubsection{\texorpdfstring{extract\_descriptors()}{extract\_descriptors()}}
+{\footnotesize\ttfamily def featurematching\+\_\+calculator.\+Feature\+Matching\+Calculator.\+extract\+\_\+descriptors (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function to extracts descriptors from the message
+Args:
+    msg: The message containing descriptors
+Return:  A numpy array of extracted descriptors
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classfeaturematching__calculator_1_1_feature_matching_calculator_a1337cd786ec4083c08a7d76218a3e554}\label{classfeaturematching__calculator_1_1_feature_matching_calculator_a1337cd786ec4083c08a7d76218a3e554}} 
+\index{featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}!matching@{matching}}
+\index{matching@{matching}!featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}}
+\doxysubsubsection{\texorpdfstring{matching()}{matching()}}
+{\footnotesize\ttfamily def featurematching\+\_\+calculator.\+Feature\+Matching\+Calculator.\+matching (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{current\+\_\+descriptors,  }\item[{}]{current\+\_\+keypoints,  }\item[{}]{current\+\_\+points\+\_\+3d,  }\item[{}]{last\+\_\+points\+\_\+3d,  }\item[{}]{last\+\_\+descriptors,  }\item[{}]{last\+\_\+keypoints }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This is the feature matching function. Using a BFMatcher, it matches the current descriptors, the 3D points and keypoints of two 
+consecutive messages and it filters the matches based on the Euclidean distance between the 3D points. If the Euclidean distance
+is smaller than the threshold distance set at 30 cm, the match is considered valid.
+Args:
+    current_descriptors: Descriptors from the current frame
+    current_keypoints: Keypoints from the current frame
+    current_points_3d: 3D points from the current frame
+    last_points_3d: 3D points from the previous frame
+    last_descriptors: Descriptors from the previous frame
+    last_keypoints: Keypoints from the previous frame
+Return: The 2D and 3D points of the current and previous images, the good matches and the number of matches
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classfeaturematching__calculator_1_1_feature_matching_calculator_a9b26c02f2d32d3e86c051a9b0ee6a7f3}\label{classfeaturematching__calculator_1_1_feature_matching_calculator_a9b26c02f2d32d3e86c051a9b0ee6a7f3}} 
+\index{featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}!odometry\_callback@{odometry\_callback}}
+\index{odometry\_callback@{odometry\_callback}!featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}}
+\doxysubsubsection{\texorpdfstring{odometry\_callback()}{odometry\_callback()}}
+{\footnotesize\ttfamily def featurematching\+\_\+calculator.\+Feature\+Matching\+Calculator.\+odometry\+\_\+callback (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Callback function for the odometry topic, used to get the current position
+Args:
+    msg: The message containing the odometry data
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classfeaturematching__calculator_1_1_feature_matching_calculator_a01af9077d354fbe42b92e5263b2417d0}\label{classfeaturematching__calculator_1_1_feature_matching_calculator_a01af9077d354fbe42b92e5263b2417d0}} 
+\index{featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}!pnp\_ransac@{pnp\_ransac}}
+\index{pnp\_ransac@{pnp\_ransac}!featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}}
+\doxysubsubsection{\texorpdfstring{pnp\_ransac()}{pnp\_ransac()}}
+{\footnotesize\ttfamily def featurematching\+\_\+calculator.\+Feature\+Matching\+Calculator.\+pnp\+\_\+ransac (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{pt\+\_\+2d\+\_\+current\+\_\+vector,  }\item[{}]{pt\+\_\+2d\+\_\+previous\+\_\+vector,  }\item[{}]{pt\+\_\+3d\+\_\+current\+\_\+vector,  }\item[{}]{pt\+\_\+3d\+\_\+previous\+\_\+vector,  }\item[{}]{intrinsic\+\_\+matrices }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This is the PnP RANSAC function. Computes the R,t vectors to project the 3D points of the previous image into the current image
+Args:
+    pt_2d_current_vector: 2D points from the current image
+    pt_2d_previous_vector: 2D points from the previous image
+    pt_3d_current_vector: 3D points from the current image
+    pt_3d_previous_vector: 3D points from the previous image
+    intrinsic_matrices: Camera intrinsic matrices
+Return: The 3D and 2D points of the current and previous images, the success of the PnP RANSAC, the rotation and translation vectors, the inliers
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classfeaturematching__calculator_1_1_feature_matching_calculator_af52e2f18717a3155603794a44b08016e}\label{classfeaturematching__calculator_1_1_feature_matching_calculator_af52e2f18717a3155603794a44b08016e}} 
+\index{featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}!reprojection\_error@{reprojection\_error}}
+\index{reprojection\_error@{reprojection\_error}!featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}}
+\doxysubsubsection{\texorpdfstring{reprojection\_error()}{reprojection\_error()}}
+{\footnotesize\ttfamily def featurematching\+\_\+calculator.\+Feature\+Matching\+Calculator.\+reprojection\+\_\+error (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{model\+\_\+points\+\_\+previous,  }\item[{}]{image\+\_\+points\+\_\+current,  }\item[{}]{model\+\_\+points\+\_\+current,  }\item[{}]{image\+\_\+points\+\_\+previous,  }\item[{}]{rvec,  }\item[{}]{tvec,  }\item[{}]{intrinsic\+\_\+matrices,  }\item[{}]{current\+\_\+cam\+\_\+\+T\+\_\+world,  }\item[{}]{last\+\_\+cam\+\_\+\+T\+\_\+world }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This function calculates the reprojection error of the 3D points. It reprojects the 3D points of the previous image into the current image and 
+the 3D points of the current image into the previous image. If the distance between the reprojected 2D points and the actual 2D points is smaller
+than the reprojection threshold, the 3D point is considered valid.
+Args:
+    model_points_previous: 3D points from the previous image
+    image_points_current: 2D points from the current image
+    model_points_current: 3D points from the current image
+    image_points_previous: 2D points from the previous image
+    rvec: Rotation vector from PnP RANSAC
+    tvec: Translation vector from PnP RANSAC
+    intrinsic_matrices: Camera intrinsic matrices
+    current_cam_T_world: Current camera transformation matrix 
+    last_cam_T_world: Previous camera transformation matrix 
+Return: The valid 3D points, the distances from the camera and the distances between the 2D points
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classfeaturematching__calculator_1_1_feature_matching_calculator_ad8d5fb66500c7169304f470fd4d1557c}\label{classfeaturematching__calculator_1_1_feature_matching_calculator_ad8d5fb66500c7169304f470fd4d1557c}} 
+\index{featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}!bf@{bf}}
+\index{bf@{bf}!featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}}
+\doxysubsubsection{\texorpdfstring{bf}{bf}}
+{\footnotesize\ttfamily featurematching\+\_\+calculator.\+Feature\+Matching\+Calculator.\+bf}
+
+
+
+Variable to store the B\+F\+Matcher, used in the feature matching process (see function matching in \mbox{\hyperlink{featurematching__calculator_8py}{featurematching\+\_\+calculator.\+py}}) 
+
+\mbox{\Hypertarget{classfeaturematching__calculator_1_1_feature_matching_calculator_acb21bcfae01f24735714592e7bd2afbd}\label{classfeaturematching__calculator_1_1_feature_matching_calculator_acb21bcfae01f24735714592e7bd2afbd}} 
+\index{featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}!camera\_params@{camera\_params}}
+\index{camera\_params@{camera\_params}!featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}}
+\doxysubsubsection{\texorpdfstring{camera\_params}{camera\_params}}
+{\footnotesize\ttfamily featurematching\+\_\+calculator.\+Feature\+Matching\+Calculator.\+camera\+\_\+params\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classfeaturematching__calculator_1_1_feature_matching_calculator_a880f945e7f2da35be1dc9412375fdd51}\label{classfeaturematching__calculator_1_1_feature_matching_calculator_a880f945e7f2da35be1dc9412375fdd51}} 
+\index{featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}!current\_position@{current\_position}}
+\index{current\_position@{current\_position}!featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}}
+\doxysubsubsection{\texorpdfstring{current\_position}{current\_position}}
+{\footnotesize\ttfamily featurematching\+\_\+calculator.\+Feature\+Matching\+Calculator.\+current\+\_\+position}
+
+\mbox{\Hypertarget{classfeaturematching__calculator_1_1_feature_matching_calculator_a178f63bb426ce7300fe014be42e3a3c8}\label{classfeaturematching__calculator_1_1_feature_matching_calculator_a178f63bb426ce7300fe014be42e3a3c8}} 
+\index{featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}!current\_velocity@{current\_velocity}}
+\index{current\_velocity@{current\_velocity}!featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}}
+\doxysubsubsection{\texorpdfstring{current\_velocity}{current\_velocity}}
+{\footnotesize\ttfamily featurematching\+\_\+calculator.\+Feature\+Matching\+Calculator.\+current\+\_\+velocity}
+
+\mbox{\Hypertarget{classfeaturematching__calculator_1_1_feature_matching_calculator_a752ab149258c0cf11dfe65013f29a8c8}\label{classfeaturematching__calculator_1_1_feature_matching_calculator_a752ab149258c0cf11dfe65013f29a8c8}} 
+\index{featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}!cx@{cx}}
+\index{cx@{cx}!featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}}
+\doxysubsubsection{\texorpdfstring{cx}{cx}}
+{\footnotesize\ttfamily featurematching\+\_\+calculator.\+Feature\+Matching\+Calculator.\+cx = self.\+camera\+\_\+params\mbox{[}f\textquotesingle{}Camera\+\_\+pinhole\+\_\+px\+\_\+cam\{i\}\textquotesingle{}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classfeaturematching__calculator_1_1_feature_matching_calculator_a00a71a0cc7cf7724cac8eb1f9e366059}\label{classfeaturematching__calculator_1_1_feature_matching_calculator_a00a71a0cc7cf7724cac8eb1f9e366059}} 
+\index{featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}!cy@{cy}}
+\index{cy@{cy}!featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}}
+\doxysubsubsection{\texorpdfstring{cy}{cy}}
+{\footnotesize\ttfamily featurematching\+\_\+calculator.\+Feature\+Matching\+Calculator.\+cy = self.\+camera\+\_\+params\mbox{[}f\textquotesingle{}Camera\+\_\+pinhole\+\_\+py\+\_\+cam\{i\}\textquotesingle{}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classfeaturematching__calculator_1_1_feature_matching_calculator_a8cb6c32aa57fa44596f074a6fe579889}\label{classfeaturematching__calculator_1_1_feature_matching_calculator_a8cb6c32aa57fa44596f074a6fe579889}} 
+\index{featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}!extrinsic\_matrices@{extrinsic\_matrices}}
+\index{extrinsic\_matrices@{extrinsic\_matrices}!featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}}
+\doxysubsubsection{\texorpdfstring{extrinsic\_matrices}{extrinsic\_matrices}}
+{\footnotesize\ttfamily featurematching\+\_\+calculator.\+Feature\+Matching\+Calculator.\+extrinsic\+\_\+matrices\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classfeaturematching__calculator_1_1_feature_matching_calculator_a0ee9d729410dad27c10cb4dfa14c9c97}\label{classfeaturematching__calculator_1_1_feature_matching_calculator_a0ee9d729410dad27c10cb4dfa14c9c97}} 
+\index{featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}!fx@{fx}}
+\index{fx@{fx}!featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}}
+\doxysubsubsection{\texorpdfstring{fx}{fx}}
+{\footnotesize\ttfamily featurematching\+\_\+calculator.\+Feature\+Matching\+Calculator.\+fx = self.\+camera\+\_\+params\mbox{[}f\textquotesingle{}Camera\+\_\+pinhole\+\_\+fx\+\_\+cam\{i\}\textquotesingle{}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classfeaturematching__calculator_1_1_feature_matching_calculator_a9a3c91f8f98ade31c0dbcc5ec692b9fc}\label{classfeaturematching__calculator_1_1_feature_matching_calculator_a9a3c91f8f98ade31c0dbcc5ec692b9fc}} 
+\index{featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}!fy@{fy}}
+\index{fy@{fy}!featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}}
+\doxysubsubsection{\texorpdfstring{fy}{fy}}
+{\footnotesize\ttfamily featurematching\+\_\+calculator.\+Feature\+Matching\+Calculator.\+fy = self.\+camera\+\_\+params\mbox{[}f\textquotesingle{}Camera\+\_\+pinhole\+\_\+fy\+\_\+cam\{i\}\textquotesingle{}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classfeaturematching__calculator_1_1_feature_matching_calculator_a33a168311052af5fca518090e61e0806}\label{classfeaturematching__calculator_1_1_feature_matching_calculator_a33a168311052af5fca518090e61e0806}} 
+\index{featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}!intrinsic\_matrices@{intrinsic\_matrices}}
+\index{intrinsic\_matrices@{intrinsic\_matrices}!featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}}
+\doxysubsubsection{\texorpdfstring{intrinsic\_matrices}{intrinsic\_matrices}}
+{\footnotesize\ttfamily featurematching\+\_\+calculator.\+Feature\+Matching\+Calculator.\+intrinsic\+\_\+matrices\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classfeaturematching__calculator_1_1_feature_matching_calculator_ac877a4d4207e4bf0b90b63de46fb7bcd}\label{classfeaturematching__calculator_1_1_feature_matching_calculator_ac877a4d4207e4bf0b90b63de46fb7bcd}} 
+\index{featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}!params@{params}}
+\index{params@{params}!featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}}
+\doxysubsubsection{\texorpdfstring{params}{params}}
+{\footnotesize\ttfamily list featurematching\+\_\+calculator.\+Feature\+Matching\+Calculator.\+params\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  [}
+\DoxyCodeLine{                self.camera\_params[f\textcolor{stringliteral}{'CameraSystem\_cam\{i\}\_1'}],}
+\DoxyCodeLine{                self.camera\_params[f\textcolor{stringliteral}{'CameraSystem\_cam\{i\}\_2'}],}
+\DoxyCodeLine{                self.camera\_params[f\textcolor{stringliteral}{'CameraSystem\_cam\{i\}\_3'}],}
+\DoxyCodeLine{                self.camera\_params[f\textcolor{stringliteral}{'CameraSystem\_cam\{i\}\_4'}],}
+\DoxyCodeLine{                self.camera\_params[f\textcolor{stringliteral}{'CameraSystem\_cam\{i\}\_5'}],}
+\DoxyCodeLine{                self.camera\_params[f\textcolor{stringliteral}{'CameraSystem\_cam\{i\}\_6'}]}
+\DoxyCodeLine{            ]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classfeaturematching__calculator_1_1_feature_matching_calculator_a6aa746c458be9d2a58c9dc39fbca0784}\label{classfeaturematching__calculator_1_1_feature_matching_calculator_a6aa746c458be9d2a58c9dc39fbca0784}} 
+\index{featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}!reprojection\_threshold@{reprojection\_threshold}}
+\index{reprojection\_threshold@{reprojection\_threshold}!featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}}
+\doxysubsubsection{\texorpdfstring{reprojection\_threshold}{reprojection\_threshold}}
+{\footnotesize\ttfamily featurematching\+\_\+calculator.\+Feature\+Matching\+Calculator.\+reprojection\+\_\+threshold}
+
+
+
+Variable to store reprojection threshold, used to filter valid 3D points. 
+
+\mbox{\Hypertarget{classfeaturematching__calculator_1_1_feature_matching_calculator_a6d3c43f09b661582133e6367c8cace05}\label{classfeaturematching__calculator_1_1_feature_matching_calculator_a6d3c43f09b661582133e6367c8cace05}} 
+\index{featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}!robot\_points@{robot\_points}}
+\index{robot\_points@{robot\_points}!featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}}
+\doxysubsubsection{\texorpdfstring{robot\_points}{robot\_points}}
+{\footnotesize\ttfamily featurematching\+\_\+calculator.\+Feature\+Matching\+Calculator.\+robot\+\_\+points\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classfeaturematching__calculator_1_1_feature_matching_calculator_af30f0ed6647511cce8c1bd0820911ef2}\label{classfeaturematching__calculator_1_1_feature_matching_calculator_af30f0ed6647511cce8c1bd0820911ef2}} 
+\index{featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}!threshold\_distance@{threshold\_distance}}
+\index{threshold\_distance@{threshold\_distance}!featurematching\_calculator.FeatureMatchingCalculator@{featurematching\_calculator.FeatureMatchingCalculator}}
+\doxysubsubsection{\texorpdfstring{threshold\_distance}{threshold\_distance}}
+{\footnotesize\ttfamily featurematching\+\_\+calculator.\+Feature\+Matching\+Calculator.\+threshold\+\_\+distance}
+
+
+
+Variable to store the threshold for the Euclidean distance between 3D points, used to filter the matches. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{featurematching__calculator_8py}{featurematching\+\_\+calculator.\+py}}\end{DoxyCompactItemize}

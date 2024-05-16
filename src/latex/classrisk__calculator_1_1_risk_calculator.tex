@@ -1,0 +1,69 @@
+\hypertarget{classrisk__calculator_1_1_risk_calculator}{}\doxysection{risk\+\_\+calculator.\+Risk\+Calculator Class Reference}
+\label{classrisk__calculator_1_1_risk_calculator}\index{risk\_calculator.RiskCalculator@{risk\_calculator.RiskCalculator}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classrisk__calculator_1_1_risk_calculator_a82c85e7e873ff19d3546b163d95d475d}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classrisk__calculator_1_1_risk_calculator_a7b0f2a8e06b5dca4ba726005c77d4b05}{compute\+Risk\+Factor}} (self, robot\+\_\+points, points3d, world\+\_\+\+Tprevious, world\+\_\+\+Tcurrent, previous\+\_\+timestamp, current\+\_\+timestamp, offset=0.\+75, time\+\_\+multiplier=0.\+5, k=0.\+5, min\+\_\+time\+\_\+clip\+\_\+value=0.\+1)
+\item 
+def \mbox{\hyperlink{classrisk__calculator_1_1_risk_calculator_a44ce766fe268878d8fc2ce8455f74511}{risk\+\_\+to\+\_\+colormap}} (self, risk\+\_\+factor, cam\+\_\+points)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrisk__calculator_1_1_risk_calculator_ac7d2db38dcda52f4531ac3066d9115f1}{risktocolormap\+\_\+pub}}
+\begin{DoxyCompactList}\small\item\em Publisher for the risk factor visualization using a colormap. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}This node implements the risk factor for the AUV
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrisk__calculator_1_1_risk_calculator_a82c85e7e873ff19d3546b163d95d475d}\label{classrisk__calculator_1_1_risk_calculator_a82c85e7e873ff19d3546b163d95d475d}} 
+\index{risk\_calculator.RiskCalculator@{risk\_calculator.RiskCalculator}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!risk\_calculator.RiskCalculator@{risk\_calculator.RiskCalculator}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def risk\+\_\+calculator.\+Risk\+Calculator.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrisk__calculator_1_1_risk_calculator_a7b0f2a8e06b5dca4ba726005c77d4b05}\label{classrisk__calculator_1_1_risk_calculator_a7b0f2a8e06b5dca4ba726005c77d4b05}} 
+\index{risk\_calculator.RiskCalculator@{risk\_calculator.RiskCalculator}!computeRiskFactor@{computeRiskFactor}}
+\index{computeRiskFactor@{computeRiskFactor}!risk\_calculator.RiskCalculator@{risk\_calculator.RiskCalculator}}
+\doxysubsubsection{\texorpdfstring{computeRiskFactor()}{computeRiskFactor()}}
+{\footnotesize\ttfamily def risk\+\_\+calculator.\+Risk\+Calculator.\+compute\+Risk\+Factor (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{robot\+\_\+points,  }\item[{}]{points3d,  }\item[{}]{world\+\_\+\+Tprevious,  }\item[{}]{world\+\_\+\+Tcurrent,  }\item[{}]{previous\+\_\+timestamp,  }\item[{}]{current\+\_\+timestamp,  }\item[{}]{offset = {\ttfamily 0.75},  }\item[{}]{time\+\_\+multiplier = {\ttfamily 0.5},  }\item[{}]{k = {\ttfamily 0.5},  }\item[{}]{min\+\_\+time\+\_\+clip\+\_\+value = {\ttfamily 0.1} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function to calculate the risk factor
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrisk__calculator_1_1_risk_calculator_a44ce766fe268878d8fc2ce8455f74511}\label{classrisk__calculator_1_1_risk_calculator_a44ce766fe268878d8fc2ce8455f74511}} 
+\index{risk\_calculator.RiskCalculator@{risk\_calculator.RiskCalculator}!risk\_to\_colormap@{risk\_to\_colormap}}
+\index{risk\_to\_colormap@{risk\_to\_colormap}!risk\_calculator.RiskCalculator@{risk\_calculator.RiskCalculator}}
+\doxysubsubsection{\texorpdfstring{risk\_to\_colormap()}{risk\_to\_colormap()}}
+{\footnotesize\ttfamily def risk\+\_\+calculator.\+Risk\+Calculator.\+risk\+\_\+to\+\_\+colormap (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{risk\+\_\+factor,  }\item[{}]{cam\+\_\+points }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function to convert the risk factor to a colormap. When the risk factor is 1, which is the maximum risk, the color is red. Instead,
+when the risk factor is 0, which is the minimum risk, the color is blue. The other colors are interpolated between red and blue depending
+on the risk factor value.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrisk__calculator_1_1_risk_calculator_ac7d2db38dcda52f4531ac3066d9115f1}\label{classrisk__calculator_1_1_risk_calculator_ac7d2db38dcda52f4531ac3066d9115f1}} 
+\index{risk\_calculator.RiskCalculator@{risk\_calculator.RiskCalculator}!risktocolormap\_pub@{risktocolormap\_pub}}
+\index{risktocolormap\_pub@{risktocolormap\_pub}!risk\_calculator.RiskCalculator@{risk\_calculator.RiskCalculator}}
+\doxysubsubsection{\texorpdfstring{risktocolormap\_pub}{risktocolormap\_pub}}
+{\footnotesize\ttfamily risk\+\_\+calculator.\+Risk\+Calculator.\+risktocolormap\+\_\+pub}
+
+
+
+Publisher for the risk factor visualization using a colormap. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{risk__calculator_8py}{risk\+\_\+calculator.\+py}}\end{DoxyCompactItemize}

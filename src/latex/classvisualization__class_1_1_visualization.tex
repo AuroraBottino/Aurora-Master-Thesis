@@ -1,0 +1,452 @@
+\hypertarget{classvisualization__class_1_1_visualization}{}\doxysection{visualization\+\_\+class.\+Visualization Class Reference}
+\label{classvisualization__class_1_1_visualization}\index{visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classvisualization__class_1_1_visualization_aff29d1ddc5c86056a046479b1479513d}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classvisualization__class_1_1_visualization_ae1791152bbf517b6b39d6abf3ab831cf}{create\+\_\+marker}} (self, marker\+\_\+type, position, orientation, scale, color, id, namespace, frame\+\_\+id=\textquotesingle{}map\textquotesingle{})
+\item 
+def \mbox{\hyperlink{classvisualization__class_1_1_visualization_abffd1aca81c4a557a2aa5a387728e7a6}{create\+\_\+point0\+\_\+marker}} (self, id, points\+\_\+on\+\_\+auv, frame\+\_\+id=\textquotesingle{}map\textquotesingle{})
+\item 
+def \mbox{\hyperlink{classvisualization__class_1_1_visualization_a156ad1a19958a83c63fc0058e5b27046}{create\+\_\+point1\+\_\+marker}} (self, id, points\+\_\+on\+\_\+auv, frame\+\_\+id=\textquotesingle{}map\textquotesingle{})
+\item 
+def \mbox{\hyperlink{classvisualization__class_1_1_visualization_aaed459474a85fc1b26505e55c47c97eb}{create\+\_\+point2\+\_\+marker}} (self, id, points\+\_\+on\+\_\+auv, frame\+\_\+id=\textquotesingle{}map\textquotesingle{})
+\item 
+def \mbox{\hyperlink{classvisualization__class_1_1_visualization_a81c7ece204f67f052cdf2a3304a64826}{create\+\_\+point3\+\_\+marker}} (self, id, points\+\_\+on\+\_\+auv, frame\+\_\+id=\textquotesingle{}map\textquotesingle{})
+\item 
+def \mbox{\hyperlink{classvisualization__class_1_1_visualization_a10ea235f9629bd4098aa17fa7fe6fe67}{create\+\_\+point4\+\_\+marker}} (self, id, points\+\_\+on\+\_\+auv, frame\+\_\+id=\textquotesingle{}map\textquotesingle{})
+\item 
+def \mbox{\hyperlink{classvisualization__class_1_1_visualization_a784e7871d34949be62713a1c920907fd}{create\+\_\+point5\+\_\+marker}} (self, id, points\+\_\+on\+\_\+auv, frame\+\_\+id=\textquotesingle{}map\textquotesingle{})
+\item 
+def \mbox{\hyperlink{classvisualization__class_1_1_visualization_a3d54f1b59e8e034fa6ee289ccad6e37e}{create\+\_\+point6\+\_\+marker}} (self, id, points\+\_\+on\+\_\+auv, frame\+\_\+id=\textquotesingle{}map\textquotesingle{})
+\item 
+def \mbox{\hyperlink{classvisualization__class_1_1_visualization_a3a875825917d601017508df618def30c}{publish\+\_\+pointcloud}} (self, cloud\+\_\+points)
+\item 
+def \mbox{\hyperlink{classvisualization__class_1_1_visualization_aa27cf88471617e6c60667b931197d2ce}{publish\+\_\+valid\+\_\+3d\+\_\+points}} (self, valid\+\_\+3d\+\_\+points)
+\item 
+def \mbox{\hyperlink{classvisualization__class_1_1_visualization_a96f16aa7dec5a255223164a91e332875}{visualize\+\_\+trajectory}} (self, point)
+\item 
+def \mbox{\hyperlink{classvisualization__class_1_1_visualization_a28557848bba846d5fe29e4737710a20a}{visualize\+\_\+attractive\+\_\+force}} (self, current\+\_\+position, attractive\+\_\+force)
+\item 
+def \mbox{\hyperlink{classvisualization__class_1_1_visualization_acf48ddf766988dc33eb1619543341eaf}{visualize\+\_\+repulsive\+\_\+force}} (self, current\+\_\+position, repulsive\+\_\+force, pub, color)
+\item 
+def \mbox{\hyperlink{classvisualization__class_1_1_visualization_a7e18888f7c424553b7d76e2cffaf5d52}{visualize\+\_\+octomap}} (self, obstacle\+\_\+centroids, obstacle\+\_\+normals, current\+\_\+position)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classvisualization__class_1_1_visualization_af0f96ecaf8661db27bbadf43b8f9cd4f}{odom\+\_\+subscriber}}
+\begin{DoxyCompactList}\small\item\em Subscriber to the odometry topic, used to get the current position. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvisualization__class_1_1_visualization_a69dc8284de7b9530c921f96c1e21f24e}{dvl\+\_\+subscriber}}
+\begin{DoxyCompactList}\small\item\em Subscriber to the D\+VL topic, used to get the current velocity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvisualization__class_1_1_visualization_a29c6d384896ecec0fbeabcfe0d5dc31c}{centroids\+\_\+normals\+\_\+publisher}}
+\begin{DoxyCompactList}\small\item\em Publisher for the visualization of the centroids and normals of the octomap. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvisualization__class_1_1_visualization_ae79dc313683f27a5804c418b4b12b68b}{currentpointcloud\+\_\+publisher}}
+\begin{DoxyCompactList}\small\item\em Publisher for the current point cloud. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvisualization__class_1_1_visualization_a52a4bcd2524f7283e044ea26ea7beb3d}{previouspointcloud\+\_\+publisher}}
+\begin{DoxyCompactList}\small\item\em Publisher for the previous point cloud. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvisualization__class_1_1_visualization_a4b24e649f8fa298f49bd576028053e5f}{valid\+\_\+3d\+\_\+points\+\_\+publisher}}
+\begin{DoxyCompactList}\small\item\em Publisher for the point cloud of valid 3D points. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvisualization__class_1_1_visualization_a51cfd3cff5a899c9e204462e6b405c10}{visualize\+\_\+trajectory\+\_\+publisher}}
+\begin{DoxyCompactList}\small\item\em Publisher for the robot\textquotesingle{}s trajectory visualization. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvisualization__class_1_1_visualization_aa8386952383c50a7809a4583468a4034}{risktocolormap\+\_\+publisher}}
+\begin{DoxyCompactList}\small\item\em Publisher for the risk factor visualization using a colormap. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvisualization__class_1_1_visualization_ae181cc7d44ba97f94b3ee4f5f9054c73}{attractive\+\_\+force\+\_\+publisher}}
+\begin{DoxyCompactList}\small\item\em Publisher for the attractive force visualization. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvisualization__class_1_1_visualization_aedd3a4857048e33d645bed5d4cd63706}{repulsive\+\_\+force\+\_\+publisher}}
+\begin{DoxyCompactList}\small\item\em Publisher for the repulsive force visualization\+: this force is computed using the theory of potential fields, without considering the risk factor (beta = 0) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvisualization__class_1_1_visualization_a7d5c28275c59073c7c5c4e8bb392c366}{repulsive\+\_\+force\+\_\+risk\+\_\+publisher}}
+\begin{DoxyCompactList}\small\item\em Publisher for the repulsive force with risk\+: this force includes the risk factor (beta = 1) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvisualization__class_1_1_visualization_a8fb79e2555752543bedbe741e658eb04}{points\+\_\+on\+\_\+auv\+\_\+publisher}}
+\begin{DoxyCompactList}\small\item\em Publisher for the points on the A\+UV\+: this publisher includes all the seven selected points on the A\+UV. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvisualization__class_1_1_visualization_ae210cad2f6e5f3df4345d3a00443e62e}{point0\+\_\+pub}}
+\begin{DoxyCompactList}\small\item\em Publisher for the camera base position on the A\+UV\+: the individual publisher can be used if we want to visualize each point separately from the others. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvisualization__class_1_1_visualization_a9b3b8245809fddafb59ee8dd1401db77}{point1\+\_\+pub}}
+\begin{DoxyCompactList}\small\item\em Publisher for point 1 on the A\+UV. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvisualization__class_1_1_visualization_a3e70a978906e45d2ce4c4cf71277a2e4}{point2\+\_\+pub}}
+\begin{DoxyCompactList}\small\item\em Publisher for point 2 on the A\+UV. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvisualization__class_1_1_visualization_afaa5f5bb618f6a4051c04914551ebb30}{point3\+\_\+pub}}
+\begin{DoxyCompactList}\small\item\em Publisher for point 3 on the A\+UV. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvisualization__class_1_1_visualization_acd8fbd95ee82bbbd9086017fc2ee99e4}{point4\+\_\+pub}}
+\begin{DoxyCompactList}\small\item\em Publisher for point 4 on the A\+UV. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvisualization__class_1_1_visualization_a69ac2f69c720d51aea514242781fa78d}{point5\+\_\+pub}}
+\begin{DoxyCompactList}\small\item\em Publisher for point 5 on the A\+UV. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvisualization__class_1_1_visualization_a95223b9f5b4af5b98fe517925fbc55e7}{point6\+\_\+pub}}
+\begin{DoxyCompactList}\small\item\em Publisher for point 6 on the A\+UV. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvisualization__class_1_1_visualization_a536ffd6ae5b8b1a1992ba7466077dbbc}{octomap}}
+\item 
+\mbox{\hyperlink{classvisualization__class_1_1_visualization_a42848a4ded8c990b3324a4470b8295cc}{path}}
+\item 
+\mbox{\hyperlink{classvisualization__class_1_1_visualization_a529a1f8b1a7d894fb76d3ef8d1f5f432}{pose\+\_\+array}}
+\item 
+\mbox{\hyperlink{classvisualization__class_1_1_visualization_a1ab46bd549b4729f58e0c53c73ecf1ff}{attractive\+\_\+marker\+\_\+array}}
+\item 
+\mbox{\hyperlink{classvisualization__class_1_1_visualization_a3b39ae7e39a7118dcf21545650e9e029}{repulsive\+\_\+marker\+\_\+array}}
+\item 
+\mbox{\hyperlink{classvisualization__class_1_1_visualization_ac49302053fff6e486cda20b7d70047a5}{total\+\_\+force\+\_\+marker\+\_\+array}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}This node implements the visualitazion of: points on the AUV, the previous and the current point clouds, the valid 3d points, the robot's trajectory, the octomap, the attractive and repulsive forces
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classvisualization__class_1_1_visualization_aff29d1ddc5c86056a046479b1479513d}\label{classvisualization__class_1_1_visualization_aff29d1ddc5c86056a046479b1479513d}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def visualization\+\_\+class.\+Visualization.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classvisualization__class_1_1_visualization_ae1791152bbf517b6b39d6abf3ab831cf}\label{classvisualization__class_1_1_visualization_ae1791152bbf517b6b39d6abf3ab831cf}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!create\_marker@{create\_marker}}
+\index{create\_marker@{create\_marker}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{create\_marker()}{create\_marker()}}
+{\footnotesize\ttfamily def visualization\+\_\+class.\+Visualization.\+create\+\_\+marker (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{marker\+\_\+type,  }\item[{}]{position,  }\item[{}]{orientation,  }\item[{}]{scale,  }\item[{}]{color,  }\item[{}]{id,  }\item[{}]{namespace,  }\item[{}]{frame\+\_\+id = {\ttfamily \textquotesingle{}map\textquotesingle{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a marker for visualization
+Return: marker
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classvisualization__class_1_1_visualization_abffd1aca81c4a557a2aa5a387728e7a6}\label{classvisualization__class_1_1_visualization_abffd1aca81c4a557a2aa5a387728e7a6}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!create\_point0\_marker@{create\_point0\_marker}}
+\index{create\_point0\_marker@{create\_point0\_marker}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{create\_point0\_marker()}{create\_point0\_marker()}}
+{\footnotesize\ttfamily def visualization\+\_\+class.\+Visualization.\+create\+\_\+point0\+\_\+marker (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{id,  }\item[{}]{points\+\_\+on\+\_\+auv,  }\item[{}]{frame\+\_\+id = {\ttfamily \textquotesingle{}map\textquotesingle{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a marker to visualize the camera base position on the AUV
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classvisualization__class_1_1_visualization_a156ad1a19958a83c63fc0058e5b27046}\label{classvisualization__class_1_1_visualization_a156ad1a19958a83c63fc0058e5b27046}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!create\_point1\_marker@{create\_point1\_marker}}
+\index{create\_point1\_marker@{create\_point1\_marker}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{create\_point1\_marker()}{create\_point1\_marker()}}
+{\footnotesize\ttfamily def visualization\+\_\+class.\+Visualization.\+create\+\_\+point1\+\_\+marker (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{id,  }\item[{}]{points\+\_\+on\+\_\+auv,  }\item[{}]{frame\+\_\+id = {\ttfamily \textquotesingle{}map\textquotesingle{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a marker to visualize the first point (-0.83,0.5,-1.34) on the AUV
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classvisualization__class_1_1_visualization_aaed459474a85fc1b26505e55c47c97eb}\label{classvisualization__class_1_1_visualization_aaed459474a85fc1b26505e55c47c97eb}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!create\_point2\_marker@{create\_point2\_marker}}
+\index{create\_point2\_marker@{create\_point2\_marker}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{create\_point2\_marker()}{create\_point2\_marker()}}
+{\footnotesize\ttfamily def visualization\+\_\+class.\+Visualization.\+create\+\_\+point2\+\_\+marker (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{id,  }\item[{}]{points\+\_\+on\+\_\+auv,  }\item[{}]{frame\+\_\+id = {\ttfamily \textquotesingle{}map\textquotesingle{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a marker to visualize the second point (-0.83,-0.5,-1.34) on the AUV
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classvisualization__class_1_1_visualization_a81c7ece204f67f052cdf2a3304a64826}\label{classvisualization__class_1_1_visualization_a81c7ece204f67f052cdf2a3304a64826}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!create\_point3\_marker@{create\_point3\_marker}}
+\index{create\_point3\_marker@{create\_point3\_marker}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{create\_point3\_marker()}{create\_point3\_marker()}}
+{\footnotesize\ttfamily def visualization\+\_\+class.\+Visualization.\+create\+\_\+point3\+\_\+marker (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{id,  }\item[{}]{points\+\_\+on\+\_\+auv,  }\item[{}]{frame\+\_\+id = {\ttfamily \textquotesingle{}map\textquotesingle{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a marker to visualize the third point (0.77,-0.5,-1.34) on the AUV
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classvisualization__class_1_1_visualization_a10ea235f9629bd4098aa17fa7fe6fe67}\label{classvisualization__class_1_1_visualization_a10ea235f9629bd4098aa17fa7fe6fe67}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!create\_point4\_marker@{create\_point4\_marker}}
+\index{create\_point4\_marker@{create\_point4\_marker}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{create\_point4\_marker()}{create\_point4\_marker()}}
+{\footnotesize\ttfamily def visualization\+\_\+class.\+Visualization.\+create\+\_\+point4\+\_\+marker (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{id,  }\item[{}]{points\+\_\+on\+\_\+auv,  }\item[{}]{frame\+\_\+id = {\ttfamily \textquotesingle{}map\textquotesingle{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a marker to visualize the fourth point (0.77,0.5,-1.34) on the AUV
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classvisualization__class_1_1_visualization_a784e7871d34949be62713a1c920907fd}\label{classvisualization__class_1_1_visualization_a784e7871d34949be62713a1c920907fd}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!create\_point5\_marker@{create\_point5\_marker}}
+\index{create\_point5\_marker@{create\_point5\_marker}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{create\_point5\_marker()}{create\_point5\_marker()}}
+{\footnotesize\ttfamily def visualization\+\_\+class.\+Visualization.\+create\+\_\+point5\+\_\+marker (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{id,  }\item[{}]{points\+\_\+on\+\_\+auv,  }\item[{}]{frame\+\_\+id = {\ttfamily \textquotesingle{}map\textquotesingle{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a marker to visualize the fifth point (-0.83,0,-0.59) on the AUV
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classvisualization__class_1_1_visualization_a3d54f1b59e8e034fa6ee289ccad6e37e}\label{classvisualization__class_1_1_visualization_a3d54f1b59e8e034fa6ee289ccad6e37e}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!create\_point6\_marker@{create\_point6\_marker}}
+\index{create\_point6\_marker@{create\_point6\_marker}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{create\_point6\_marker()}{create\_point6\_marker()}}
+{\footnotesize\ttfamily def visualization\+\_\+class.\+Visualization.\+create\+\_\+point6\+\_\+marker (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{id,  }\item[{}]{points\+\_\+on\+\_\+auv,  }\item[{}]{frame\+\_\+id = {\ttfamily \textquotesingle{}map\textquotesingle{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a marker to visualize the sixt point (0.72,0,-0.63) on the AUV
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classvisualization__class_1_1_visualization_a3a875825917d601017508df618def30c}\label{classvisualization__class_1_1_visualization_a3a875825917d601017508df618def30c}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!publish\_pointcloud@{publish\_pointcloud}}
+\index{publish\_pointcloud@{publish\_pointcloud}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{publish\_pointcloud()}{publish\_pointcloud()}}
+{\footnotesize\ttfamily def visualization\+\_\+class.\+Visualization.\+publish\+\_\+pointcloud (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cloud\+\_\+points }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function to visualize the current and the previous point clouds
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classvisualization__class_1_1_visualization_aa27cf88471617e6c60667b931197d2ce}\label{classvisualization__class_1_1_visualization_aa27cf88471617e6c60667b931197d2ce}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!publish\_valid\_3d\_points@{publish\_valid\_3d\_points}}
+\index{publish\_valid\_3d\_points@{publish\_valid\_3d\_points}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{publish\_valid\_3d\_points()}{publish\_valid\_3d\_points()}}
+{\footnotesize\ttfamily def visualization\+\_\+class.\+Visualization.\+publish\+\_\+valid\+\_\+3d\+\_\+points (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{valid\+\_\+3d\+\_\+points }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function to visualize the valid 3d points
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classvisualization__class_1_1_visualization_a28557848bba846d5fe29e4737710a20a}\label{classvisualization__class_1_1_visualization_a28557848bba846d5fe29e4737710a20a}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!visualize\_attractive\_force@{visualize\_attractive\_force}}
+\index{visualize\_attractive\_force@{visualize\_attractive\_force}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{visualize\_attractive\_force()}{visualize\_attractive\_force()}}
+{\footnotesize\ttfamily def visualization\+\_\+class.\+Visualization.\+visualize\+\_\+attractive\+\_\+force (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{current\+\_\+position,  }\item[{}]{attractive\+\_\+force }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create arrow marker to visualize the attractive force
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classvisualization__class_1_1_visualization_a7e18888f7c424553b7d76e2cffaf5d52}\label{classvisualization__class_1_1_visualization_a7e18888f7c424553b7d76e2cffaf5d52}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!visualize\_octomap@{visualize\_octomap}}
+\index{visualize\_octomap@{visualize\_octomap}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{visualize\_octomap()}{visualize\_octomap()}}
+{\footnotesize\ttfamily def visualization\+\_\+class.\+Visualization.\+visualize\+\_\+octomap (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{obstacle\+\_\+centroids,  }\item[{}]{obstacle\+\_\+normals,  }\item[{}]{current\+\_\+position }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function to visualize the octomap. Create arrow markers for the normals and sphere markers for the centroids
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classvisualization__class_1_1_visualization_acf48ddf766988dc33eb1619543341eaf}\label{classvisualization__class_1_1_visualization_acf48ddf766988dc33eb1619543341eaf}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!visualize\_repulsive\_force@{visualize\_repulsive\_force}}
+\index{visualize\_repulsive\_force@{visualize\_repulsive\_force}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{visualize\_repulsive\_force()}{visualize\_repulsive\_force()}}
+{\footnotesize\ttfamily def visualization\+\_\+class.\+Visualization.\+visualize\+\_\+repulsive\+\_\+force (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{current\+\_\+position,  }\item[{}]{repulsive\+\_\+force,  }\item[{}]{pub,  }\item[{}]{color }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create arrow marker to visualize the repulsive force
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classvisualization__class_1_1_visualization_a96f16aa7dec5a255223164a91e332875}\label{classvisualization__class_1_1_visualization_a96f16aa7dec5a255223164a91e332875}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!visualize\_trajectory@{visualize\_trajectory}}
+\index{visualize\_trajectory@{visualize\_trajectory}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{visualize\_trajectory()}{visualize\_trajectory()}}
+{\footnotesize\ttfamily def visualization\+\_\+class.\+Visualization.\+visualize\+\_\+trajectory (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{point }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function to visualize the trajectory of the robot
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classvisualization__class_1_1_visualization_ae181cc7d44ba97f94b3ee4f5f9054c73}\label{classvisualization__class_1_1_visualization_ae181cc7d44ba97f94b3ee4f5f9054c73}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!attractive\_force\_publisher@{attractive\_force\_publisher}}
+\index{attractive\_force\_publisher@{attractive\_force\_publisher}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{attractive\_force\_publisher}{attractive\_force\_publisher}}
+{\footnotesize\ttfamily visualization\+\_\+class.\+Visualization.\+attractive\+\_\+force\+\_\+publisher}
+
+
+
+Publisher for the attractive force visualization. 
+
+\mbox{\Hypertarget{classvisualization__class_1_1_visualization_a1ab46bd549b4729f58e0c53c73ecf1ff}\label{classvisualization__class_1_1_visualization_a1ab46bd549b4729f58e0c53c73ecf1ff}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!attractive\_marker\_array@{attractive\_marker\_array}}
+\index{attractive\_marker\_array@{attractive\_marker\_array}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{attractive\_marker\_array}{attractive\_marker\_array}}
+{\footnotesize\ttfamily visualization\+\_\+class.\+Visualization.\+attractive\+\_\+marker\+\_\+array}
+
+\mbox{\Hypertarget{classvisualization__class_1_1_visualization_a29c6d384896ecec0fbeabcfe0d5dc31c}\label{classvisualization__class_1_1_visualization_a29c6d384896ecec0fbeabcfe0d5dc31c}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!centroids\_normals\_publisher@{centroids\_normals\_publisher}}
+\index{centroids\_normals\_publisher@{centroids\_normals\_publisher}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{centroids\_normals\_publisher}{centroids\_normals\_publisher}}
+{\footnotesize\ttfamily visualization\+\_\+class.\+Visualization.\+centroids\+\_\+normals\+\_\+publisher}
+
+
+
+Publisher for the visualization of the centroids and normals of the octomap. 
+
+\mbox{\Hypertarget{classvisualization__class_1_1_visualization_ae79dc313683f27a5804c418b4b12b68b}\label{classvisualization__class_1_1_visualization_ae79dc313683f27a5804c418b4b12b68b}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!currentpointcloud\_publisher@{currentpointcloud\_publisher}}
+\index{currentpointcloud\_publisher@{currentpointcloud\_publisher}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{currentpointcloud\_publisher}{currentpointcloud\_publisher}}
+{\footnotesize\ttfamily visualization\+\_\+class.\+Visualization.\+currentpointcloud\+\_\+publisher}
+
+
+
+Publisher for the current point cloud. 
+
+\mbox{\Hypertarget{classvisualization__class_1_1_visualization_a69dc8284de7b9530c921f96c1e21f24e}\label{classvisualization__class_1_1_visualization_a69dc8284de7b9530c921f96c1e21f24e}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!dvl\_subscriber@{dvl\_subscriber}}
+\index{dvl\_subscriber@{dvl\_subscriber}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{dvl\_subscriber}{dvl\_subscriber}}
+{\footnotesize\ttfamily visualization\+\_\+class.\+Visualization.\+dvl\+\_\+subscriber}
+
+
+
+Subscriber to the D\+VL topic, used to get the current velocity. 
+
+\mbox{\Hypertarget{classvisualization__class_1_1_visualization_a536ffd6ae5b8b1a1992ba7466077dbbc}\label{classvisualization__class_1_1_visualization_a536ffd6ae5b8b1a1992ba7466077dbbc}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!octomap@{octomap}}
+\index{octomap@{octomap}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{octomap}{octomap}}
+{\footnotesize\ttfamily visualization\+\_\+class.\+Visualization.\+octomap}
+
+\mbox{\Hypertarget{classvisualization__class_1_1_visualization_af0f96ecaf8661db27bbadf43b8f9cd4f}\label{classvisualization__class_1_1_visualization_af0f96ecaf8661db27bbadf43b8f9cd4f}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!odom\_subscriber@{odom\_subscriber}}
+\index{odom\_subscriber@{odom\_subscriber}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{odom\_subscriber}{odom\_subscriber}}
+{\footnotesize\ttfamily visualization\+\_\+class.\+Visualization.\+odom\+\_\+subscriber}
+
+
+
+Subscriber to the odometry topic, used to get the current position. 
+
+\mbox{\Hypertarget{classvisualization__class_1_1_visualization_a42848a4ded8c990b3324a4470b8295cc}\label{classvisualization__class_1_1_visualization_a42848a4ded8c990b3324a4470b8295cc}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!path@{path}}
+\index{path@{path}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily visualization\+\_\+class.\+Visualization.\+path}
+
+\mbox{\Hypertarget{classvisualization__class_1_1_visualization_ae210cad2f6e5f3df4345d3a00443e62e}\label{classvisualization__class_1_1_visualization_ae210cad2f6e5f3df4345d3a00443e62e}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!point0\_pub@{point0\_pub}}
+\index{point0\_pub@{point0\_pub}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{point0\_pub}{point0\_pub}}
+{\footnotesize\ttfamily visualization\+\_\+class.\+Visualization.\+point0\+\_\+pub}
+
+
+
+Publisher for the camera base position on the A\+UV\+: the individual publisher can be used if we want to visualize each point separately from the others. 
+
+\mbox{\Hypertarget{classvisualization__class_1_1_visualization_a9b3b8245809fddafb59ee8dd1401db77}\label{classvisualization__class_1_1_visualization_a9b3b8245809fddafb59ee8dd1401db77}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!point1\_pub@{point1\_pub}}
+\index{point1\_pub@{point1\_pub}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{point1\_pub}{point1\_pub}}
+{\footnotesize\ttfamily visualization\+\_\+class.\+Visualization.\+point1\+\_\+pub}
+
+
+
+Publisher for point 1 on the A\+UV. 
+
+\mbox{\Hypertarget{classvisualization__class_1_1_visualization_a3e70a978906e45d2ce4c4cf71277a2e4}\label{classvisualization__class_1_1_visualization_a3e70a978906e45d2ce4c4cf71277a2e4}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!point2\_pub@{point2\_pub}}
+\index{point2\_pub@{point2\_pub}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{point2\_pub}{point2\_pub}}
+{\footnotesize\ttfamily visualization\+\_\+class.\+Visualization.\+point2\+\_\+pub}
+
+
+
+Publisher for point 2 on the A\+UV. 
+
+\mbox{\Hypertarget{classvisualization__class_1_1_visualization_afaa5f5bb618f6a4051c04914551ebb30}\label{classvisualization__class_1_1_visualization_afaa5f5bb618f6a4051c04914551ebb30}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!point3\_pub@{point3\_pub}}
+\index{point3\_pub@{point3\_pub}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{point3\_pub}{point3\_pub}}
+{\footnotesize\ttfamily visualization\+\_\+class.\+Visualization.\+point3\+\_\+pub}
+
+
+
+Publisher for point 3 on the A\+UV. 
+
+\mbox{\Hypertarget{classvisualization__class_1_1_visualization_acd8fbd95ee82bbbd9086017fc2ee99e4}\label{classvisualization__class_1_1_visualization_acd8fbd95ee82bbbd9086017fc2ee99e4}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!point4\_pub@{point4\_pub}}
+\index{point4\_pub@{point4\_pub}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{point4\_pub}{point4\_pub}}
+{\footnotesize\ttfamily visualization\+\_\+class.\+Visualization.\+point4\+\_\+pub}
+
+
+
+Publisher for point 4 on the A\+UV. 
+
+\mbox{\Hypertarget{classvisualization__class_1_1_visualization_a69ac2f69c720d51aea514242781fa78d}\label{classvisualization__class_1_1_visualization_a69ac2f69c720d51aea514242781fa78d}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!point5\_pub@{point5\_pub}}
+\index{point5\_pub@{point5\_pub}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{point5\_pub}{point5\_pub}}
+{\footnotesize\ttfamily visualization\+\_\+class.\+Visualization.\+point5\+\_\+pub}
+
+
+
+Publisher for point 5 on the A\+UV. 
+
+\mbox{\Hypertarget{classvisualization__class_1_1_visualization_a95223b9f5b4af5b98fe517925fbc55e7}\label{classvisualization__class_1_1_visualization_a95223b9f5b4af5b98fe517925fbc55e7}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!point6\_pub@{point6\_pub}}
+\index{point6\_pub@{point6\_pub}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{point6\_pub}{point6\_pub}}
+{\footnotesize\ttfamily visualization\+\_\+class.\+Visualization.\+point6\+\_\+pub}
+
+
+
+Publisher for point 6 on the A\+UV. 
+
+\mbox{\Hypertarget{classvisualization__class_1_1_visualization_a8fb79e2555752543bedbe741e658eb04}\label{classvisualization__class_1_1_visualization_a8fb79e2555752543bedbe741e658eb04}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!points\_on\_auv\_publisher@{points\_on\_auv\_publisher}}
+\index{points\_on\_auv\_publisher@{points\_on\_auv\_publisher}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{points\_on\_auv\_publisher}{points\_on\_auv\_publisher}}
+{\footnotesize\ttfamily visualization\+\_\+class.\+Visualization.\+points\+\_\+on\+\_\+auv\+\_\+publisher}
+
+
+
+Publisher for the points on the A\+UV\+: this publisher includes all the seven selected points on the A\+UV. 
+
+\mbox{\Hypertarget{classvisualization__class_1_1_visualization_a529a1f8b1a7d894fb76d3ef8d1f5f432}\label{classvisualization__class_1_1_visualization_a529a1f8b1a7d894fb76d3ef8d1f5f432}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!pose\_array@{pose\_array}}
+\index{pose\_array@{pose\_array}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{pose\_array}{pose\_array}}
+{\footnotesize\ttfamily visualization\+\_\+class.\+Visualization.\+pose\+\_\+array}
+
+\mbox{\Hypertarget{classvisualization__class_1_1_visualization_a52a4bcd2524f7283e044ea26ea7beb3d}\label{classvisualization__class_1_1_visualization_a52a4bcd2524f7283e044ea26ea7beb3d}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!previouspointcloud\_publisher@{previouspointcloud\_publisher}}
+\index{previouspointcloud\_publisher@{previouspointcloud\_publisher}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{previouspointcloud\_publisher}{previouspointcloud\_publisher}}
+{\footnotesize\ttfamily visualization\+\_\+class.\+Visualization.\+previouspointcloud\+\_\+publisher}
+
+
+
+Publisher for the previous point cloud. 
+
+\mbox{\Hypertarget{classvisualization__class_1_1_visualization_aedd3a4857048e33d645bed5d4cd63706}\label{classvisualization__class_1_1_visualization_aedd3a4857048e33d645bed5d4cd63706}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!repulsive\_force\_publisher@{repulsive\_force\_publisher}}
+\index{repulsive\_force\_publisher@{repulsive\_force\_publisher}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{repulsive\_force\_publisher}{repulsive\_force\_publisher}}
+{\footnotesize\ttfamily visualization\+\_\+class.\+Visualization.\+repulsive\+\_\+force\+\_\+publisher}
+
+
+
+Publisher for the repulsive force visualization\+: this force is computed using the theory of potential fields, without considering the risk factor (beta = 0) 
+
+\mbox{\Hypertarget{classvisualization__class_1_1_visualization_a7d5c28275c59073c7c5c4e8bb392c366}\label{classvisualization__class_1_1_visualization_a7d5c28275c59073c7c5c4e8bb392c366}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!repulsive\_force\_risk\_publisher@{repulsive\_force\_risk\_publisher}}
+\index{repulsive\_force\_risk\_publisher@{repulsive\_force\_risk\_publisher}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{repulsive\_force\_risk\_publisher}{repulsive\_force\_risk\_publisher}}
+{\footnotesize\ttfamily visualization\+\_\+class.\+Visualization.\+repulsive\+\_\+force\+\_\+risk\+\_\+publisher}
+
+
+
+Publisher for the repulsive force with risk\+: this force includes the risk factor (beta = 1) 
+
+\mbox{\Hypertarget{classvisualization__class_1_1_visualization_a3b39ae7e39a7118dcf21545650e9e029}\label{classvisualization__class_1_1_visualization_a3b39ae7e39a7118dcf21545650e9e029}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!repulsive\_marker\_array@{repulsive\_marker\_array}}
+\index{repulsive\_marker\_array@{repulsive\_marker\_array}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{repulsive\_marker\_array}{repulsive\_marker\_array}}
+{\footnotesize\ttfamily visualization\+\_\+class.\+Visualization.\+repulsive\+\_\+marker\+\_\+array}
+
+\mbox{\Hypertarget{classvisualization__class_1_1_visualization_aa8386952383c50a7809a4583468a4034}\label{classvisualization__class_1_1_visualization_aa8386952383c50a7809a4583468a4034}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!risktocolormap\_publisher@{risktocolormap\_publisher}}
+\index{risktocolormap\_publisher@{risktocolormap\_publisher}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{risktocolormap\_publisher}{risktocolormap\_publisher}}
+{\footnotesize\ttfamily visualization\+\_\+class.\+Visualization.\+risktocolormap\+\_\+publisher}
+
+
+
+Publisher for the risk factor visualization using a colormap. 
+
+\mbox{\Hypertarget{classvisualization__class_1_1_visualization_ac49302053fff6e486cda20b7d70047a5}\label{classvisualization__class_1_1_visualization_ac49302053fff6e486cda20b7d70047a5}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!total\_force\_marker\_array@{total\_force\_marker\_array}}
+\index{total\_force\_marker\_array@{total\_force\_marker\_array}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{total\_force\_marker\_array}{total\_force\_marker\_array}}
+{\footnotesize\ttfamily visualization\+\_\+class.\+Visualization.\+total\+\_\+force\+\_\+marker\+\_\+array}
+
+\mbox{\Hypertarget{classvisualization__class_1_1_visualization_a4b24e649f8fa298f49bd576028053e5f}\label{classvisualization__class_1_1_visualization_a4b24e649f8fa298f49bd576028053e5f}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!valid\_3d\_points\_publisher@{valid\_3d\_points\_publisher}}
+\index{valid\_3d\_points\_publisher@{valid\_3d\_points\_publisher}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{valid\_3d\_points\_publisher}{valid\_3d\_points\_publisher}}
+{\footnotesize\ttfamily visualization\+\_\+class.\+Visualization.\+valid\+\_\+3d\+\_\+points\+\_\+publisher}
+
+
+
+Publisher for the point cloud of valid 3D points. 
+
+\mbox{\Hypertarget{classvisualization__class_1_1_visualization_a51cfd3cff5a899c9e204462e6b405c10}\label{classvisualization__class_1_1_visualization_a51cfd3cff5a899c9e204462e6b405c10}} 
+\index{visualization\_class.Visualization@{visualization\_class.Visualization}!visualize\_trajectory\_publisher@{visualize\_trajectory\_publisher}}
+\index{visualize\_trajectory\_publisher@{visualize\_trajectory\_publisher}!visualization\_class.Visualization@{visualization\_class.Visualization}}
+\doxysubsubsection{\texorpdfstring{visualize\_trajectory\_publisher}{visualize\_trajectory\_publisher}}
+{\footnotesize\ttfamily visualization\+\_\+class.\+Visualization.\+visualize\+\_\+trajectory\+\_\+publisher}
+
+
+
+Publisher for the robot\textquotesingle{}s trajectory visualization. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{visualization__class_8py}{visualization\+\_\+class.\+py}}\end{DoxyCompactItemize}

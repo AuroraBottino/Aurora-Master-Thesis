@@ -1,0 +1,738 @@
+\hypertarget{classmain_1_1_point_cloud_feature_matcher}{}\doxysection{main.\+Point\+Cloud\+Feature\+Matcher Class Reference}
+\label{classmain_1_1_point_cloud_feature_matcher}\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a48a50528aaacfa424ae778b4925daa1f}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a323a65dd8d15f77ef7f2a9056cf72a3c}{cayley2hom}} (self, cayley\+Params)
+\item 
+def \mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a7a0ec4c949a35db6439180374f09c4f9}{cayley2rot}} (self, cay\+Param\+In)
+\item 
+def \mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_ac7457be711e77f7e0583b6976d30e140}{extract\+\_\+descriptors}} (self, msg)
+\item 
+def \mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a4d3c713981e4e0b0a5ced19df18a33cc}{odometry\+\_\+callback}} (self, msg)
+\item 
+def \mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a7385248f378efe3fd5f264e7da6384c5}{dvl\+\_\+callback}} (self, msg)
+\item 
+def \mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_aef606b07d186326ce8e47fe50f5186d7}{callback}} (self, msg)
+\item 
+def \mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a6cf596329f0fa5bec7c7f5f25a3416f1}{save\+\_\+distances}} (self)
+\item 
+def \mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a28d0e9dfd62e048fcc568ccabfc34dee}{run}} (self)
+\item 
+def \mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a382800886a1656af03f85b011f20a489}{\+\_\+\+\_\+del\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a1f2cf3a66baa7f252572363f67a888bc}{subscriber}}
+\begin{DoxyCompactList}\small\item\em Subscriber to the point cloud topic. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a7ef55803b0f4c207ffdf283082e0f171}{processed\+\_\+clouds\+\_\+count}}
+\begin{DoxyCompactList}\small\item\em Variable to store the number of processed point clouds. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_ae2f363dd01f3f29c3d68204ad126be66}{odom\+\_\+subscriber}}
+\begin{DoxyCompactList}\small\item\em Subscriber to the odometry topic, used to get the current position. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_af66458df13be382a97d6f2d3cd76e429}{dvl\+\_\+subscriber}}
+\begin{DoxyCompactList}\small\item\em Subscriber to the D\+VL topic, used to get the current velocity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_aba417c190c928866eb6e86558546ec3d}{centroids\+\_\+normals\+\_\+publisher}}
+\begin{DoxyCompactList}\small\item\em Publisher for the visualization of the centroids and normals of the octomap. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_ab2c5d1795b43a925410fb901af67d3d6}{currentpointcloud\+\_\+publisher}}
+\begin{DoxyCompactList}\small\item\em Publisher for the current point cloud. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a04af03755a7be4407e98e38c0ff5ec9c}{previouspointcloud\+\_\+publisher}}
+\begin{DoxyCompactList}\small\item\em Publisher for the previous point cloud. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_ad59ae8aea41dba3b86d232177ef61388}{valid\+\_\+3d\+\_\+points\+\_\+publisher}}
+\begin{DoxyCompactList}\small\item\em Publisher for the point cloud of valid 3D points. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_aeaa71104aedd59d53d58cb463ec313dd}{visualize\+\_\+trajectory\+\_\+publisher}}
+\begin{DoxyCompactList}\small\item\em Publisher for the robot\textquotesingle{}s trajectory visualization. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_af65995a02c243b66a97ee520d22934c2}{risktocolormap\+\_\+publisher}}
+\begin{DoxyCompactList}\small\item\em Publisher for the risk factor visualization using a colormap. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a34db8e90bf5b57c7c59a35012833f7d4}{attractive\+\_\+force\+\_\+publisher}}
+\begin{DoxyCompactList}\small\item\em Publisher for the attractive force visualization. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_acbd40e78e6d2a37fa623f890e1ab84a2}{repulsive\+\_\+force\+\_\+publisher}}
+\begin{DoxyCompactList}\small\item\em Publisher for the repulsive force visualization\+: this force is computed using the theory of potential fields, without considering the risk factor (beta = 0) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a981ba945f904049d965f587ff6c0386d}{repulsive\+\_\+force\+\_\+risk\+\_\+publisher}}
+\begin{DoxyCompactList}\small\item\em Publisher for the repulsive force with risk\+: this force includes the risk factor (beta = 1) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_adae5ee66f2250bbab070b859e800ecf7}{points\+\_\+on\+\_\+auv\+\_\+publisher}}
+\begin{DoxyCompactList}\small\item\em Publisher for the points on the A\+UV\+: this publisher includes all the seven selected points on the A\+UV. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a6922e55f80a3fe43d98d0e26698469a6}{point0\+\_\+pub}}
+\begin{DoxyCompactList}\small\item\em Publisher for the camera base position on the A\+UV\+: the individual publisher can be used if we want to visualize each point separately from the others. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a336e8d679a12ddc107c6f383f49341ec}{point1\+\_\+pub}}
+\begin{DoxyCompactList}\small\item\em Publisher for point 1 on the A\+UV. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_aefe410efa6f0551b166c89bbef408b38}{point2\+\_\+pub}}
+\begin{DoxyCompactList}\small\item\em Publisher for point 2 on the A\+UV. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a713e36dbc99cb223d610d49d4a12f7de}{point3\+\_\+pub}}
+\begin{DoxyCompactList}\small\item\em Publisher for point 3 on the A\+UV. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_abc3b9f1e81fa76f47a966c4e875ae9eb}{point4\+\_\+pub}}
+\begin{DoxyCompactList}\small\item\em Publisher for point 4 on the A\+UV. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a50315324561603038e4e106f14ae3cd7}{point5\+\_\+pub}}
+\begin{DoxyCompactList}\small\item\em Publisher for point 5 on the A\+UV. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a2bcb4a52e53e0cd7a53884bb215b74ba}{point6\+\_\+pub}}
+\begin{DoxyCompactList}\small\item\em Publisher for point 6 on the A\+UV. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_ae28fd3721dc09f202147f8c40563ef6a}{last\+\_\+descriptors}}
+\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a0d23e2608bfd1796d88fac43e35c0d89}{current\+\_\+descriptor\+\_\+index}}
+\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_afbf5ed56fad590325c855573626d9225}{last\+\_\+points3d}}
+\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a7bc40753335b96bbf5b8d45b61ea935f}{current\+\_\+point3d\+\_\+index}}
+\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a292e3b5c50dc5840e8fcc6fa5b7e2300}{last\+\_\+keypoints}}
+\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a86ef139e3e89e009a9471a82048dc386}{bf}}
+\begin{DoxyCompactList}\small\item\em Variable to store the B\+F\+Matcher, used in the feature matching process (see function matching in \mbox{\hyperlink{featurematching__calculator_8py}{featurematching\+\_\+calculator.\+py}}) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_af2d5deef90b3b743bfb0810f4cfd19f1}{octomap}}
+\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a39e0aa8375eac7cef280410c12b2d189}{force\+\_\+calculator}}
+\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a8122e378acd97c59c5a0371407feb5db}{risk\+\_\+calculator}}
+\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a61db0594a9d0085d69fa4b9321da6daa}{visualization\+\_\+class}}
+\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a3620096948d4f8290a5bdcd0f3ea57bd}{featurematching\+\_\+calculator}}
+\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_ad4081640d4aeb4ba2f813315dcbc49a8}{previous\+\_\+cloud\+\_\+points}}
+\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_adc0a162b66cf06af360345a6fd776af8}{current\+\_\+position}}
+\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a3b1f9a32802c1a498eb3192ede8b627e}{previous\+\_\+position}}
+\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a8ac2f15b3a5f38814ce48ff3db132e03}{current\+\_\+velocity}}
+\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a59c49857c19d7428f128de52d4edeb09}{repulsive\+\_\+gain}}
+\begin{DoxyCompactList}\small\item\em Variable to store the repulsive gain, which is used to scale the repulsive force. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a30acf0e7a068782c5fcf51a6c809065f}{min\+\_\+distance}}
+\begin{DoxyCompactList}\small\item\em Variable to store the minimum distance between the A\+UV and the obstacles used to compute the repulsive force. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_adaaac86f8c76618f0b529865c1a8276c}{current\+\_\+timestamp}}
+\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_ac2218c558fbbaa35cfa7ce075c47c867}{previous\+\_\+timestamp}}
+\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_aae47c0e94c992caec2fd3d84b493427b}{positions\+\_\+history}}
+\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a08f3599cd89e1855f5b73f9999b34505}{velocities\+\_\+history}}
+\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a5251bb42fb87f7dae6c3bc0854663631}{distance\+\_\+pt2d\+\_\+vector}}
+\begin{DoxyCompactList}\small\item\em Variable to store the reprojection errors. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a463eae51aa9e94c0d0bb70a936f51534}{distances\+\_\+from\+\_\+camera}}
+\begin{DoxyCompactList}\small\item\em Variable to store the distances of 3D points in camera frame from the camera. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a51d0f916ce03db938749b4b9fcbb0bef}{last\+\_\+cam\+\_\+\+T\+\_\+world}}
+\begin{DoxyCompactList}\small\item\em Variable to store the previous transformation between the camera frame and the world frame. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_ae722e1c2afe7176c31354c74fbdbeb57}{cam\+\_\+world\+\_\+pose}}
+\begin{DoxyCompactList}\small\item\em Variable to store the current pose of the camera in the world frame. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_acd4799c6f30323761249c0b84c8de1de}{last\+\_\+cam\+\_\+world\+\_\+pose}}
+\begin{DoxyCompactList}\small\item\em Variable to store the previous pose of the camera in the world frame. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_aab0cb80ac5dc3c4fae32ebba21ca38f1}{cam\+\_\+3d\+\_\+points}}
+\begin{DoxyCompactList}\small\item\em Variable to store the 3D points for each camera. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a73b0e057f52954eab0fd666fc70e35cf}{points\+\_\+on\+\_\+auv}}
+\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a8dc5d5d0762d9169642db35c3f530b96}{max\+\_\+obstacles}}
+\begin{DoxyCompactList}\small\item\em Variable to store the maximum number of obstacles to consider inside the minimun distance to the robot in order to compute the repulsive force, which is equal to 10. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_ab2cc5441887e769018a02b454ef556aa}{alpha}}
+\begin{DoxyCompactList}\small\item\em Variable to store the alpha parameter, which is used to scale the direction of the repulsive force. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_ad9c8d5612cc0e3c0a25d0cb09a6b5bf1}{beta}}
+\begin{DoxyCompactList}\small\item\em Variable to store the beta parameter, which is used to scale the risk factor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a5e9281198b9d3a6f2dd142f920297298}{average\+\_\+repulsive\+\_\+forces}}
+\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_acf6ae54ab6f15967e28861c1dec01a6c}{camera\+\_\+params}}
+\begin{DoxyCompactList}\small\item\em Variable to store the camera parameters read from the yaml file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a6a02f1b7136c38014a7e8a7be2e29a59}{robot\+\_\+points}}
+\begin{DoxyCompactList}\small\item\em Variable to store the seven selected points on the A\+UV. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_aea66c70e44d21d99d7942eba7c8039d1}{intrinsic\+\_\+matrices}}
+\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_a36dec9e4657858528c76282f0edbba6b}{extrinsic\+\_\+matrices}}
+\item 
+\mbox{\hyperlink{classmain_1_1_point_cloud_feature_matcher_aa6389bb3cd1b30e446aa38ed1510236f}{current\+\_\+keypoint\+\_\+index}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a48a50528aaacfa424ae778b4925daa1f}\label{classmain_1_1_point_cloud_feature_matcher_a48a50528aaacfa424ae778b4925daa1f}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def main.\+Point\+Cloud\+Feature\+Matcher.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a382800886a1656af03f85b011f20a489}\label{classmain_1_1_point_cloud_feature_matcher_a382800886a1656af03f85b011f20a489}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!\_\_del\_\_@{\_\_del\_\_}}
+\index{\_\_del\_\_@{\_\_del\_\_}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{\_\_del\_\_()}{\_\_del\_\_()}}
+{\footnotesize\ttfamily def main.\+Point\+Cloud\+Feature\+Matcher.\+\_\+\+\_\+del\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_aef606b07d186326ce8e47fe50f5186d7}\label{classmain_1_1_point_cloud_feature_matcher_aef606b07d186326ce8e47fe50f5186d7}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!callback@{callback}}
+\index{callback@{callback}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{callback()}{callback()}}
+{\footnotesize\ttfamily def main.\+Point\+Cloud\+Feature\+Matcher.\+callback (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Callback function for the point cloud topic
+Args:
+    msg: The message containing the point cloud data
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a323a65dd8d15f77ef7f2a9056cf72a3c}\label{classmain_1_1_point_cloud_feature_matcher_a323a65dd8d15f77ef7f2a9056cf72a3c}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!cayley2hom@{cayley2hom}}
+\index{cayley2hom@{cayley2hom}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{cayley2hom()}{cayley2hom()}}
+{\footnotesize\ttfamily def main.\+Point\+Cloud\+Feature\+Matcher.\+cayley2hom (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cayley\+Params }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Converts Cayley parameters to a homogeneous matrix
+Return: A 4x4 homogeneous transformation matrix
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a7a0ec4c949a35db6439180374f09c4f9}\label{classmain_1_1_point_cloud_feature_matcher_a7a0ec4c949a35db6439180374f09c4f9}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!cayley2rot@{cayley2rot}}
+\index{cayley2rot@{cayley2rot}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{cayley2rot()}{cayley2rot()}}
+{\footnotesize\ttfamily def main.\+Point\+Cloud\+Feature\+Matcher.\+cayley2rot (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cay\+Param\+In }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Converts Cayley parameters to a rotation matrix
+Return: A 3x3 rotation matrix
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a7385248f378efe3fd5f264e7da6384c5}\label{classmain_1_1_point_cloud_feature_matcher_a7385248f378efe3fd5f264e7da6384c5}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!dvl\_callback@{dvl\_callback}}
+\index{dvl\_callback@{dvl\_callback}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{dvl\_callback()}{dvl\_callback()}}
+{\footnotesize\ttfamily def main.\+Point\+Cloud\+Feature\+Matcher.\+dvl\+\_\+callback (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Callback function for the DVL topic, used to get the current velocity
+Args:
+    msg: The message containing the DVL data
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_ac7457be711e77f7e0583b6976d30e140}\label{classmain_1_1_point_cloud_feature_matcher_ac7457be711e77f7e0583b6976d30e140}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!extract\_descriptors@{extract\_descriptors}}
+\index{extract\_descriptors@{extract\_descriptors}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{extract\_descriptors()}{extract\_descriptors()}}
+{\footnotesize\ttfamily def main.\+Point\+Cloud\+Feature\+Matcher.\+extract\+\_\+descriptors (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function to extracts descriptors from the message
+Args:
+    msg: The message containing descriptors
+Return:  A numpy array of extracted descriptors
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a4d3c713981e4e0b0a5ced19df18a33cc}\label{classmain_1_1_point_cloud_feature_matcher_a4d3c713981e4e0b0a5ced19df18a33cc}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!odometry\_callback@{odometry\_callback}}
+\index{odometry\_callback@{odometry\_callback}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{odometry\_callback()}{odometry\_callback()}}
+{\footnotesize\ttfamily def main.\+Point\+Cloud\+Feature\+Matcher.\+odometry\+\_\+callback (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Callback function for the odometry topic, used to get the current position
+Args:
+    msg: The message containing the odometry data
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a28d0e9dfd62e048fcc568ccabfc34dee}\label{classmain_1_1_point_cloud_feature_matcher_a28d0e9dfd62e048fcc568ccabfc34dee}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!run@{run}}
+\index{run@{run}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily def main.\+Point\+Cloud\+Feature\+Matcher.\+run (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a6cf596329f0fa5bec7c7f5f25a3416f1}\label{classmain_1_1_point_cloud_feature_matcher_a6cf596329f0fa5bec7c7f5f25a3416f1}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!save\_distances@{save\_distances}}
+\index{save\_distances@{save\_distances}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{save\_distances()}{save\_distances()}}
+{\footnotesize\ttfamily def main.\+Point\+Cloud\+Feature\+Matcher.\+save\+\_\+distances (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This function saves in a csv file the distances of the 3D points from the camera and the distances between
+the 2D points. It is used to plot how the reprojection error changes as function of the distances from the camera.
+See script plot.py for the plot.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_ab2cc5441887e769018a02b454ef556aa}\label{classmain_1_1_point_cloud_feature_matcher_ab2cc5441887e769018a02b454ef556aa}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!alpha@{alpha}}
+\index{alpha@{alpha}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{alpha}{alpha}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+alpha}
+
+
+
+Variable to store the alpha parameter, which is used to scale the direction of the repulsive force. 
+
+If alpha = 0, the repulsive force is computed only considering only the direction of motion. If alpha = 1, the repulsive force is computed only considering the direction of the obstacles. By changing the value of alpha, the repulsive force can be computed considering both the direction of motion and the direction of the obstacles. \mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a34db8e90bf5b57c7c59a35012833f7d4}\label{classmain_1_1_point_cloud_feature_matcher_a34db8e90bf5b57c7c59a35012833f7d4}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!attractive\_force\_publisher@{attractive\_force\_publisher}}
+\index{attractive\_force\_publisher@{attractive\_force\_publisher}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{attractive\_force\_publisher}{attractive\_force\_publisher}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+attractive\+\_\+force\+\_\+publisher}
+
+
+
+Publisher for the attractive force visualization. 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a5e9281198b9d3a6f2dd142f920297298}\label{classmain_1_1_point_cloud_feature_matcher_a5e9281198b9d3a6f2dd142f920297298}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!average\_repulsive\_forces@{average\_repulsive\_forces}}
+\index{average\_repulsive\_forces@{average\_repulsive\_forces}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{average\_repulsive\_forces}{average\_repulsive\_forces}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+average\+\_\+repulsive\+\_\+forces}
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_ad9c8d5612cc0e3c0a25d0cb09a6b5bf1}\label{classmain_1_1_point_cloud_feature_matcher_ad9c8d5612cc0e3c0a25d0cb09a6b5bf1}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!beta@{beta}}
+\index{beta@{beta}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{beta}{beta}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+beta}
+
+
+
+Variable to store the beta parameter, which is used to scale the risk factor. 
+
+If beta = 0, the repulsive force is computed without considering the risk factor. If beta = 1, the repulsive force is computed only considering the risk factor. By changing the value of beta, the repulsive force can be computed considering both the risk factor and the repulsive force. \mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a86ef139e3e89e009a9471a82048dc386}\label{classmain_1_1_point_cloud_feature_matcher_a86ef139e3e89e009a9471a82048dc386}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!bf@{bf}}
+\index{bf@{bf}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{bf}{bf}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+bf}
+
+
+
+Variable to store the B\+F\+Matcher, used in the feature matching process (see function matching in \mbox{\hyperlink{featurematching__calculator_8py}{featurematching\+\_\+calculator.\+py}}) 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_aab0cb80ac5dc3c4fae32ebba21ca38f1}\label{classmain_1_1_point_cloud_feature_matcher_aab0cb80ac5dc3c4fae32ebba21ca38f1}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!cam\_3d\_points@{cam\_3d\_points}}
+\index{cam\_3d\_points@{cam\_3d\_points}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{cam\_3d\_points}{cam\_3d\_points}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+cam\+\_\+3d\+\_\+points}
+
+
+
+Variable to store the 3D points for each camera. 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_ae722e1c2afe7176c31354c74fbdbeb57}\label{classmain_1_1_point_cloud_feature_matcher_ae722e1c2afe7176c31354c74fbdbeb57}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!cam\_world\_pose@{cam\_world\_pose}}
+\index{cam\_world\_pose@{cam\_world\_pose}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{cam\_world\_pose}{cam\_world\_pose}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+cam\+\_\+world\+\_\+pose}
+
+
+
+Variable to store the current pose of the camera in the world frame. 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_acf6ae54ab6f15967e28861c1dec01a6c}\label{classmain_1_1_point_cloud_feature_matcher_acf6ae54ab6f15967e28861c1dec01a6c}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!camera\_params@{camera\_params}}
+\index{camera\_params@{camera\_params}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{camera\_params}{camera\_params}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+camera\+\_\+params}
+
+
+
+Variable to store the camera parameters read from the yaml file. 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_aba417c190c928866eb6e86558546ec3d}\label{classmain_1_1_point_cloud_feature_matcher_aba417c190c928866eb6e86558546ec3d}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!centroids\_normals\_publisher@{centroids\_normals\_publisher}}
+\index{centroids\_normals\_publisher@{centroids\_normals\_publisher}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{centroids\_normals\_publisher}{centroids\_normals\_publisher}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+centroids\+\_\+normals\+\_\+publisher}
+
+
+
+Publisher for the visualization of the centroids and normals of the octomap. 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a0d23e2608bfd1796d88fac43e35c0d89}\label{classmain_1_1_point_cloud_feature_matcher_a0d23e2608bfd1796d88fac43e35c0d89}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!current\_descriptor\_index@{current\_descriptor\_index}}
+\index{current\_descriptor\_index@{current\_descriptor\_index}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{current\_descriptor\_index}{current\_descriptor\_index}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+current\+\_\+descriptor\+\_\+index}
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_aa6389bb3cd1b30e446aa38ed1510236f}\label{classmain_1_1_point_cloud_feature_matcher_aa6389bb3cd1b30e446aa38ed1510236f}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!current\_keypoint\_index@{current\_keypoint\_index}}
+\index{current\_keypoint\_index@{current\_keypoint\_index}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{current\_keypoint\_index}{current\_keypoint\_index}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+current\+\_\+keypoint\+\_\+index}
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a7bc40753335b96bbf5b8d45b61ea935f}\label{classmain_1_1_point_cloud_feature_matcher_a7bc40753335b96bbf5b8d45b61ea935f}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!current\_point3d\_index@{current\_point3d\_index}}
+\index{current\_point3d\_index@{current\_point3d\_index}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{current\_point3d\_index}{current\_point3d\_index}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+current\+\_\+point3d\+\_\+index}
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_adc0a162b66cf06af360345a6fd776af8}\label{classmain_1_1_point_cloud_feature_matcher_adc0a162b66cf06af360345a6fd776af8}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!current\_position@{current\_position}}
+\index{current\_position@{current\_position}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{current\_position}{current\_position}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+current\+\_\+position}
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_adaaac86f8c76618f0b529865c1a8276c}\label{classmain_1_1_point_cloud_feature_matcher_adaaac86f8c76618f0b529865c1a8276c}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!current\_timestamp@{current\_timestamp}}
+\index{current\_timestamp@{current\_timestamp}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{current\_timestamp}{current\_timestamp}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+current\+\_\+timestamp}
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a8ac2f15b3a5f38814ce48ff3db132e03}\label{classmain_1_1_point_cloud_feature_matcher_a8ac2f15b3a5f38814ce48ff3db132e03}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!current\_velocity@{current\_velocity}}
+\index{current\_velocity@{current\_velocity}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{current\_velocity}{current\_velocity}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+current\+\_\+velocity}
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_ab2c5d1795b43a925410fb901af67d3d6}\label{classmain_1_1_point_cloud_feature_matcher_ab2c5d1795b43a925410fb901af67d3d6}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!currentpointcloud\_publisher@{currentpointcloud\_publisher}}
+\index{currentpointcloud\_publisher@{currentpointcloud\_publisher}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{currentpointcloud\_publisher}{currentpointcloud\_publisher}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+currentpointcloud\+\_\+publisher}
+
+
+
+Publisher for the current point cloud. 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a5251bb42fb87f7dae6c3bc0854663631}\label{classmain_1_1_point_cloud_feature_matcher_a5251bb42fb87f7dae6c3bc0854663631}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!distance\_pt2d\_vector@{distance\_pt2d\_vector}}
+\index{distance\_pt2d\_vector@{distance\_pt2d\_vector}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{distance\_pt2d\_vector}{distance\_pt2d\_vector}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+distance\+\_\+pt2d\+\_\+vector}
+
+
+
+Variable to store the reprojection errors. 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a463eae51aa9e94c0d0bb70a936f51534}\label{classmain_1_1_point_cloud_feature_matcher_a463eae51aa9e94c0d0bb70a936f51534}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!distances\_from\_camera@{distances\_from\_camera}}
+\index{distances\_from\_camera@{distances\_from\_camera}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{distances\_from\_camera}{distances\_from\_camera}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+distances\+\_\+from\+\_\+camera}
+
+
+
+Variable to store the distances of 3D points in camera frame from the camera. 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_af66458df13be382a97d6f2d3cd76e429}\label{classmain_1_1_point_cloud_feature_matcher_af66458df13be382a97d6f2d3cd76e429}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!dvl\_subscriber@{dvl\_subscriber}}
+\index{dvl\_subscriber@{dvl\_subscriber}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{dvl\_subscriber}{dvl\_subscriber}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+dvl\+\_\+subscriber}
+
+
+
+Subscriber to the D\+VL topic, used to get the current velocity. 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a36dec9e4657858528c76282f0edbba6b}\label{classmain_1_1_point_cloud_feature_matcher_a36dec9e4657858528c76282f0edbba6b}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!extrinsic\_matrices@{extrinsic\_matrices}}
+\index{extrinsic\_matrices@{extrinsic\_matrices}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{extrinsic\_matrices}{extrinsic\_matrices}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+extrinsic\+\_\+matrices}
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a3620096948d4f8290a5bdcd0f3ea57bd}\label{classmain_1_1_point_cloud_feature_matcher_a3620096948d4f8290a5bdcd0f3ea57bd}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!featurematching\_calculator@{featurematching\_calculator}}
+\index{featurematching\_calculator@{featurematching\_calculator}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{featurematching\_calculator}{featurematching\_calculator}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+featurematching\+\_\+calculator}
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a39e0aa8375eac7cef280410c12b2d189}\label{classmain_1_1_point_cloud_feature_matcher_a39e0aa8375eac7cef280410c12b2d189}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!force\_calculator@{force\_calculator}}
+\index{force\_calculator@{force\_calculator}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{force\_calculator}{force\_calculator}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+force\+\_\+calculator}
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_aea66c70e44d21d99d7942eba7c8039d1}\label{classmain_1_1_point_cloud_feature_matcher_aea66c70e44d21d99d7942eba7c8039d1}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!intrinsic\_matrices@{intrinsic\_matrices}}
+\index{intrinsic\_matrices@{intrinsic\_matrices}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{intrinsic\_matrices}{intrinsic\_matrices}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+intrinsic\+\_\+matrices}
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a51d0f916ce03db938749b4b9fcbb0bef}\label{classmain_1_1_point_cloud_feature_matcher_a51d0f916ce03db938749b4b9fcbb0bef}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!last\_cam\_T\_world@{last\_cam\_T\_world}}
+\index{last\_cam\_T\_world@{last\_cam\_T\_world}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{last\_cam\_T\_world}{last\_cam\_T\_world}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+last\+\_\+cam\+\_\+\+T\+\_\+world}
+
+
+
+Variable to store the previous transformation between the camera frame and the world frame. 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_acd4799c6f30323761249c0b84c8de1de}\label{classmain_1_1_point_cloud_feature_matcher_acd4799c6f30323761249c0b84c8de1de}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!last\_cam\_world\_pose@{last\_cam\_world\_pose}}
+\index{last\_cam\_world\_pose@{last\_cam\_world\_pose}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{last\_cam\_world\_pose}{last\_cam\_world\_pose}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+last\+\_\+cam\+\_\+world\+\_\+pose}
+
+
+
+Variable to store the previous pose of the camera in the world frame. 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_ae28fd3721dc09f202147f8c40563ef6a}\label{classmain_1_1_point_cloud_feature_matcher_ae28fd3721dc09f202147f8c40563ef6a}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!last\_descriptors@{last\_descriptors}}
+\index{last\_descriptors@{last\_descriptors}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{last\_descriptors}{last\_descriptors}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+last\+\_\+descriptors}
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a292e3b5c50dc5840e8fcc6fa5b7e2300}\label{classmain_1_1_point_cloud_feature_matcher_a292e3b5c50dc5840e8fcc6fa5b7e2300}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!last\_keypoints@{last\_keypoints}}
+\index{last\_keypoints@{last\_keypoints}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{last\_keypoints}{last\_keypoints}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+last\+\_\+keypoints}
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_afbf5ed56fad590325c855573626d9225}\label{classmain_1_1_point_cloud_feature_matcher_afbf5ed56fad590325c855573626d9225}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!last\_points3d@{last\_points3d}}
+\index{last\_points3d@{last\_points3d}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{last\_points3d}{last\_points3d}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+last\+\_\+points3d}
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a8dc5d5d0762d9169642db35c3f530b96}\label{classmain_1_1_point_cloud_feature_matcher_a8dc5d5d0762d9169642db35c3f530b96}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!max\_obstacles@{max\_obstacles}}
+\index{max\_obstacles@{max\_obstacles}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{max\_obstacles}{max\_obstacles}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+max\+\_\+obstacles}
+
+
+
+Variable to store the maximum number of obstacles to consider inside the minimun distance to the robot in order to compute the repulsive force, which is equal to 10. 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a30acf0e7a068782c5fcf51a6c809065f}\label{classmain_1_1_point_cloud_feature_matcher_a30acf0e7a068782c5fcf51a6c809065f}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!min\_distance@{min\_distance}}
+\index{min\_distance@{min\_distance}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{min\_distance}{min\_distance}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+min\+\_\+distance}
+
+
+
+Variable to store the minimum distance between the A\+UV and the obstacles used to compute the repulsive force. 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_af2d5deef90b3b743bfb0810f4cfd19f1}\label{classmain_1_1_point_cloud_feature_matcher_af2d5deef90b3b743bfb0810f4cfd19f1}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!octomap@{octomap}}
+\index{octomap@{octomap}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{octomap}{octomap}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+octomap}
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_ae2f363dd01f3f29c3d68204ad126be66}\label{classmain_1_1_point_cloud_feature_matcher_ae2f363dd01f3f29c3d68204ad126be66}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!odom\_subscriber@{odom\_subscriber}}
+\index{odom\_subscriber@{odom\_subscriber}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{odom\_subscriber}{odom\_subscriber}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+odom\+\_\+subscriber}
+
+
+
+Subscriber to the odometry topic, used to get the current position. 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a6922e55f80a3fe43d98d0e26698469a6}\label{classmain_1_1_point_cloud_feature_matcher_a6922e55f80a3fe43d98d0e26698469a6}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!point0\_pub@{point0\_pub}}
+\index{point0\_pub@{point0\_pub}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{point0\_pub}{point0\_pub}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+point0\+\_\+pub}
+
+
+
+Publisher for the camera base position on the A\+UV\+: the individual publisher can be used if we want to visualize each point separately from the others. 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a336e8d679a12ddc107c6f383f49341ec}\label{classmain_1_1_point_cloud_feature_matcher_a336e8d679a12ddc107c6f383f49341ec}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!point1\_pub@{point1\_pub}}
+\index{point1\_pub@{point1\_pub}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{point1\_pub}{point1\_pub}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+point1\+\_\+pub}
+
+
+
+Publisher for point 1 on the A\+UV. 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_aefe410efa6f0551b166c89bbef408b38}\label{classmain_1_1_point_cloud_feature_matcher_aefe410efa6f0551b166c89bbef408b38}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!point2\_pub@{point2\_pub}}
+\index{point2\_pub@{point2\_pub}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{point2\_pub}{point2\_pub}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+point2\+\_\+pub}
+
+
+
+Publisher for point 2 on the A\+UV. 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a713e36dbc99cb223d610d49d4a12f7de}\label{classmain_1_1_point_cloud_feature_matcher_a713e36dbc99cb223d610d49d4a12f7de}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!point3\_pub@{point3\_pub}}
+\index{point3\_pub@{point3\_pub}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{point3\_pub}{point3\_pub}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+point3\+\_\+pub}
+
+
+
+Publisher for point 3 on the A\+UV. 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_abc3b9f1e81fa76f47a966c4e875ae9eb}\label{classmain_1_1_point_cloud_feature_matcher_abc3b9f1e81fa76f47a966c4e875ae9eb}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!point4\_pub@{point4\_pub}}
+\index{point4\_pub@{point4\_pub}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{point4\_pub}{point4\_pub}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+point4\+\_\+pub}
+
+
+
+Publisher for point 4 on the A\+UV. 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a50315324561603038e4e106f14ae3cd7}\label{classmain_1_1_point_cloud_feature_matcher_a50315324561603038e4e106f14ae3cd7}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!point5\_pub@{point5\_pub}}
+\index{point5\_pub@{point5\_pub}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{point5\_pub}{point5\_pub}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+point5\+\_\+pub}
+
+
+
+Publisher for point 5 on the A\+UV. 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a2bcb4a52e53e0cd7a53884bb215b74ba}\label{classmain_1_1_point_cloud_feature_matcher_a2bcb4a52e53e0cd7a53884bb215b74ba}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!point6\_pub@{point6\_pub}}
+\index{point6\_pub@{point6\_pub}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{point6\_pub}{point6\_pub}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+point6\+\_\+pub}
+
+
+
+Publisher for point 6 on the A\+UV. 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a73b0e057f52954eab0fd666fc70e35cf}\label{classmain_1_1_point_cloud_feature_matcher_a73b0e057f52954eab0fd666fc70e35cf}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!points\_on\_auv@{points\_on\_auv}}
+\index{points\_on\_auv@{points\_on\_auv}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{points\_on\_auv}{points\_on\_auv}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+points\+\_\+on\+\_\+auv}
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_adae5ee66f2250bbab070b859e800ecf7}\label{classmain_1_1_point_cloud_feature_matcher_adae5ee66f2250bbab070b859e800ecf7}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!points\_on\_auv\_publisher@{points\_on\_auv\_publisher}}
+\index{points\_on\_auv\_publisher@{points\_on\_auv\_publisher}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{points\_on\_auv\_publisher}{points\_on\_auv\_publisher}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+points\+\_\+on\+\_\+auv\+\_\+publisher}
+
+
+
+Publisher for the points on the A\+UV\+: this publisher includes all the seven selected points on the A\+UV. 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_aae47c0e94c992caec2fd3d84b493427b}\label{classmain_1_1_point_cloud_feature_matcher_aae47c0e94c992caec2fd3d84b493427b}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!positions\_history@{positions\_history}}
+\index{positions\_history@{positions\_history}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{positions\_history}{positions\_history}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+positions\+\_\+history}
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_ad4081640d4aeb4ba2f813315dcbc49a8}\label{classmain_1_1_point_cloud_feature_matcher_ad4081640d4aeb4ba2f813315dcbc49a8}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!previous\_cloud\_points@{previous\_cloud\_points}}
+\index{previous\_cloud\_points@{previous\_cloud\_points}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{previous\_cloud\_points}{previous\_cloud\_points}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+previous\+\_\+cloud\+\_\+points}
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a3b1f9a32802c1a498eb3192ede8b627e}\label{classmain_1_1_point_cloud_feature_matcher_a3b1f9a32802c1a498eb3192ede8b627e}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!previous\_position@{previous\_position}}
+\index{previous\_position@{previous\_position}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{previous\_position}{previous\_position}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+previous\+\_\+position}
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_ac2218c558fbbaa35cfa7ce075c47c867}\label{classmain_1_1_point_cloud_feature_matcher_ac2218c558fbbaa35cfa7ce075c47c867}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!previous\_timestamp@{previous\_timestamp}}
+\index{previous\_timestamp@{previous\_timestamp}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{previous\_timestamp}{previous\_timestamp}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+previous\+\_\+timestamp}
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a04af03755a7be4407e98e38c0ff5ec9c}\label{classmain_1_1_point_cloud_feature_matcher_a04af03755a7be4407e98e38c0ff5ec9c}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!previouspointcloud\_publisher@{previouspointcloud\_publisher}}
+\index{previouspointcloud\_publisher@{previouspointcloud\_publisher}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{previouspointcloud\_publisher}{previouspointcloud\_publisher}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+previouspointcloud\+\_\+publisher}
+
+
+
+Publisher for the previous point cloud. 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a7ef55803b0f4c207ffdf283082e0f171}\label{classmain_1_1_point_cloud_feature_matcher_a7ef55803b0f4c207ffdf283082e0f171}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!processed\_clouds\_count@{processed\_clouds\_count}}
+\index{processed\_clouds\_count@{processed\_clouds\_count}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{processed\_clouds\_count}{processed\_clouds\_count}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+processed\+\_\+clouds\+\_\+count}
+
+
+
+Variable to store the number of processed point clouds. 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_acbd40e78e6d2a37fa623f890e1ab84a2}\label{classmain_1_1_point_cloud_feature_matcher_acbd40e78e6d2a37fa623f890e1ab84a2}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!repulsive\_force\_publisher@{repulsive\_force\_publisher}}
+\index{repulsive\_force\_publisher@{repulsive\_force\_publisher}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{repulsive\_force\_publisher}{repulsive\_force\_publisher}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+repulsive\+\_\+force\+\_\+publisher}
+
+
+
+Publisher for the repulsive force visualization\+: this force is computed using the theory of potential fields, without considering the risk factor (beta = 0) 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a981ba945f904049d965f587ff6c0386d}\label{classmain_1_1_point_cloud_feature_matcher_a981ba945f904049d965f587ff6c0386d}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!repulsive\_force\_risk\_publisher@{repulsive\_force\_risk\_publisher}}
+\index{repulsive\_force\_risk\_publisher@{repulsive\_force\_risk\_publisher}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{repulsive\_force\_risk\_publisher}{repulsive\_force\_risk\_publisher}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+repulsive\+\_\+force\+\_\+risk\+\_\+publisher}
+
+
+
+Publisher for the repulsive force with risk\+: this force includes the risk factor (beta = 1) 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a59c49857c19d7428f128de52d4edeb09}\label{classmain_1_1_point_cloud_feature_matcher_a59c49857c19d7428f128de52d4edeb09}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!repulsive\_gain@{repulsive\_gain}}
+\index{repulsive\_gain@{repulsive\_gain}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{repulsive\_gain}{repulsive\_gain}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+repulsive\+\_\+gain}
+
+
+
+Variable to store the repulsive gain, which is used to scale the repulsive force. 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a8122e378acd97c59c5a0371407feb5db}\label{classmain_1_1_point_cloud_feature_matcher_a8122e378acd97c59c5a0371407feb5db}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!risk\_calculator@{risk\_calculator}}
+\index{risk\_calculator@{risk\_calculator}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{risk\_calculator}{risk\_calculator}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+risk\+\_\+calculator}
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_af65995a02c243b66a97ee520d22934c2}\label{classmain_1_1_point_cloud_feature_matcher_af65995a02c243b66a97ee520d22934c2}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!risktocolormap\_publisher@{risktocolormap\_publisher}}
+\index{risktocolormap\_publisher@{risktocolormap\_publisher}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{risktocolormap\_publisher}{risktocolormap\_publisher}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+risktocolormap\+\_\+publisher}
+
+
+
+Publisher for the risk factor visualization using a colormap. 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a6a02f1b7136c38014a7e8a7be2e29a59}\label{classmain_1_1_point_cloud_feature_matcher_a6a02f1b7136c38014a7e8a7be2e29a59}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!robot\_points@{robot\_points}}
+\index{robot\_points@{robot\_points}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{robot\_points}{robot\_points}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+robot\+\_\+points}
+
+
+
+Variable to store the seven selected points on the A\+UV. 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a1f2cf3a66baa7f252572363f67a888bc}\label{classmain_1_1_point_cloud_feature_matcher_a1f2cf3a66baa7f252572363f67a888bc}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!subscriber@{subscriber}}
+\index{subscriber@{subscriber}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{subscriber}{subscriber}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+subscriber}
+
+
+
+Subscriber to the point cloud topic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em topic\+\_\+name} & name of the topic to subscribe to the point cloud data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_ad59ae8aea41dba3b86d232177ef61388}\label{classmain_1_1_point_cloud_feature_matcher_ad59ae8aea41dba3b86d232177ef61388}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!valid\_3d\_points\_publisher@{valid\_3d\_points\_publisher}}
+\index{valid\_3d\_points\_publisher@{valid\_3d\_points\_publisher}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{valid\_3d\_points\_publisher}{valid\_3d\_points\_publisher}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+valid\+\_\+3d\+\_\+points\+\_\+publisher}
+
+
+
+Publisher for the point cloud of valid 3D points. 
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a08f3599cd89e1855f5b73f9999b34505}\label{classmain_1_1_point_cloud_feature_matcher_a08f3599cd89e1855f5b73f9999b34505}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!velocities\_history@{velocities\_history}}
+\index{velocities\_history@{velocities\_history}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{velocities\_history}{velocities\_history}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+velocities\+\_\+history}
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_a61db0594a9d0085d69fa4b9321da6daa}\label{classmain_1_1_point_cloud_feature_matcher_a61db0594a9d0085d69fa4b9321da6daa}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!visualization\_class@{visualization\_class}}
+\index{visualization\_class@{visualization\_class}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{visualization\_class}{visualization\_class}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+visualization\+\_\+class}
+
+\mbox{\Hypertarget{classmain_1_1_point_cloud_feature_matcher_aeaa71104aedd59d53d58cb463ec313dd}\label{classmain_1_1_point_cloud_feature_matcher_aeaa71104aedd59d53d58cb463ec313dd}} 
+\index{main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}!visualize\_trajectory\_publisher@{visualize\_trajectory\_publisher}}
+\index{visualize\_trajectory\_publisher@{visualize\_trajectory\_publisher}!main.PointCloudFeatureMatcher@{main.PointCloudFeatureMatcher}}
+\doxysubsubsection{\texorpdfstring{visualize\_trajectory\_publisher}{visualize\_trajectory\_publisher}}
+{\footnotesize\ttfamily main.\+Point\+Cloud\+Feature\+Matcher.\+visualize\+\_\+trajectory\+\_\+publisher}
+
+
+
+Publisher for the robot\textquotesingle{}s trajectory visualization. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{main_8py}{main.\+py}}\end{DoxyCompactItemize}

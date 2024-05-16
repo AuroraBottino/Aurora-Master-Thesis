@@ -1,0 +1,131 @@
+\hypertarget{classforce__calculator_1_1_force_calculator}{}\doxysection{force\+\_\+calculator.\+Force\+Calculator Class Reference}
+\label{classforce__calculator_1_1_force_calculator}\index{force\_calculator.ForceCalculator@{force\_calculator.ForceCalculator}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classforce__calculator_1_1_force_calculator_afeb280ba1231e680a6ea58fcaf24d880}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classforce__calculator_1_1_force_calculator_ad0667bf599efee35cbe2bb38395039c0}{dvl\+\_\+callback}} (self, msg)
+\item 
+def \mbox{\hyperlink{classforce__calculator_1_1_force_calculator_adecdc300e056d665a7d990fb3d069a54}{attractive\+\_\+force}} (self)
+\item 
+def \mbox{\hyperlink{classforce__calculator_1_1_force_calculator_a40e13d82f7986e964cb607c96125336c}{repulsive\+\_\+force}} (self, \mbox{\hyperlink{classforce__calculator_1_1_force_calculator_a2fec2199bb6753d75d89fadd0383df32}{current\+\_\+velocity}}, obstacle\+\_\+centroids, obstacle\+\_\+normals, points\+\_\+on\+\_\+auv, \mbox{\hyperlink{classforce__calculator_1_1_force_calculator_a668f8a526b54b4cb544fc3235cfef6d8}{min\+\_\+distance}}, \mbox{\hyperlink{classforce__calculator_1_1_force_calculator_ae980b6c0456949b873bccddd009f1e67}{alpha}}, \mbox{\hyperlink{classforce__calculator_1_1_force_calculator_a86b672173eb7214b52d24679e97da056}{repulsive\+\_\+gain}}, beta, max\+\_\+obstacles=None, risk\+\_\+factor\+\_\+all\+\_\+points=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classforce__calculator_1_1_force_calculator_ae980b6c0456949b873bccddd009f1e67}{alpha}}
+\begin{DoxyCompactList}\small\item\em Variable to store the alpha parameter, which is used to scale the direction of the repulsive force. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classforce__calculator_1_1_force_calculator_a88ce323dffff0f343220b7f9424c7dff}{average\+\_\+repulsive\+\_\+forces}}
+\item 
+\mbox{\hyperlink{classforce__calculator_1_1_force_calculator_a668f8a526b54b4cb544fc3235cfef6d8}{min\+\_\+distance}}
+\begin{DoxyCompactList}\small\item\em Variable to store the minimum distance between the A\+UV and the obstacles used to compute the repulsive force. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classforce__calculator_1_1_force_calculator_a86b672173eb7214b52d24679e97da056}{repulsive\+\_\+gain}}
+\begin{DoxyCompactList}\small\item\em Variable to store the repulsive gain, which is used to scale the repulsive force. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classforce__calculator_1_1_force_calculator_a2fec2199bb6753d75d89fadd0383df32}{current\+\_\+velocity}}
+\item 
+\mbox{\hyperlink{classforce__calculator_1_1_force_calculator_add506966efa25b8403ea4ddbd66032c6}{dvl\+\_\+subscriber}}
+\begin{DoxyCompactList}\small\item\em Subscriber to the D\+VL topic, used to get the current velocity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}This node implements the attractive and repulsive forces acting on the AUV
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classforce__calculator_1_1_force_calculator_afeb280ba1231e680a6ea58fcaf24d880}\label{classforce__calculator_1_1_force_calculator_afeb280ba1231e680a6ea58fcaf24d880}} 
+\index{force\_calculator.ForceCalculator@{force\_calculator.ForceCalculator}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!force\_calculator.ForceCalculator@{force\_calculator.ForceCalculator}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def force\+\_\+calculator.\+Force\+Calculator.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classforce__calculator_1_1_force_calculator_adecdc300e056d665a7d990fb3d069a54}\label{classforce__calculator_1_1_force_calculator_adecdc300e056d665a7d990fb3d069a54}} 
+\index{force\_calculator.ForceCalculator@{force\_calculator.ForceCalculator}!attractive\_force@{attractive\_force}}
+\index{attractive\_force@{attractive\_force}!force\_calculator.ForceCalculator@{force\_calculator.ForceCalculator}}
+\doxysubsubsection{\texorpdfstring{attractive\_force()}{attractive\_force()}}
+{\footnotesize\ttfamily def force\+\_\+calculator.\+Force\+Calculator.\+attractive\+\_\+force (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function to calculate the attractive force. The attractive force is the current velocity of the AUV
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classforce__calculator_1_1_force_calculator_ad0667bf599efee35cbe2bb38395039c0}\label{classforce__calculator_1_1_force_calculator_ad0667bf599efee35cbe2bb38395039c0}} 
+\index{force\_calculator.ForceCalculator@{force\_calculator.ForceCalculator}!dvl\_callback@{dvl\_callback}}
+\index{dvl\_callback@{dvl\_callback}!force\_calculator.ForceCalculator@{force\_calculator.ForceCalculator}}
+\doxysubsubsection{\texorpdfstring{dvl\_callback()}{dvl\_callback()}}
+{\footnotesize\ttfamily def force\+\_\+calculator.\+Force\+Calculator.\+dvl\+\_\+callback (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Callback function for the DVL topic, used to get the current velocity
+Args:
+    msg: The message containing the DVL data
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classforce__calculator_1_1_force_calculator_a40e13d82f7986e964cb607c96125336c}\label{classforce__calculator_1_1_force_calculator_a40e13d82f7986e964cb607c96125336c}} 
+\index{force\_calculator.ForceCalculator@{force\_calculator.ForceCalculator}!repulsive\_force@{repulsive\_force}}
+\index{repulsive\_force@{repulsive\_force}!force\_calculator.ForceCalculator@{force\_calculator.ForceCalculator}}
+\doxysubsubsection{\texorpdfstring{repulsive\_force()}{repulsive\_force()}}
+{\footnotesize\ttfamily def force\+\_\+calculator.\+Force\+Calculator.\+repulsive\+\_\+force (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{current\+\_\+velocity,  }\item[{}]{obstacle\+\_\+centroids,  }\item[{}]{obstacle\+\_\+normals,  }\item[{}]{points\+\_\+on\+\_\+auv,  }\item[{}]{min\+\_\+distance,  }\item[{}]{alpha,  }\item[{}]{repulsive\+\_\+gain,  }\item[{}]{beta,  }\item[{}]{max\+\_\+obstacles = {\ttfamily None},  }\item[{}]{risk\+\_\+factor\+\_\+all\+\_\+points = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function to calculate the repulsive force
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classforce__calculator_1_1_force_calculator_ae980b6c0456949b873bccddd009f1e67}\label{classforce__calculator_1_1_force_calculator_ae980b6c0456949b873bccddd009f1e67}} 
+\index{force\_calculator.ForceCalculator@{force\_calculator.ForceCalculator}!alpha@{alpha}}
+\index{alpha@{alpha}!force\_calculator.ForceCalculator@{force\_calculator.ForceCalculator}}
+\doxysubsubsection{\texorpdfstring{alpha}{alpha}}
+{\footnotesize\ttfamily force\+\_\+calculator.\+Force\+Calculator.\+alpha}
+
+
+
+Variable to store the alpha parameter, which is used to scale the direction of the repulsive force. 
+
+If alpha = 0, the repulsive force is computed only considering only the direction of motion. If alpha = 1, the repulsive force is computed only considering the direction of the obstacles. By changing the value of alpha, the repulsive force can be computed considering both the direction of motion and the direction of the obstacles. \mbox{\Hypertarget{classforce__calculator_1_1_force_calculator_a88ce323dffff0f343220b7f9424c7dff}\label{classforce__calculator_1_1_force_calculator_a88ce323dffff0f343220b7f9424c7dff}} 
+\index{force\_calculator.ForceCalculator@{force\_calculator.ForceCalculator}!average\_repulsive\_forces@{average\_repulsive\_forces}}
+\index{average\_repulsive\_forces@{average\_repulsive\_forces}!force\_calculator.ForceCalculator@{force\_calculator.ForceCalculator}}
+\doxysubsubsection{\texorpdfstring{average\_repulsive\_forces}{average\_repulsive\_forces}}
+{\footnotesize\ttfamily force\+\_\+calculator.\+Force\+Calculator.\+average\+\_\+repulsive\+\_\+forces}
+
+\mbox{\Hypertarget{classforce__calculator_1_1_force_calculator_a2fec2199bb6753d75d89fadd0383df32}\label{classforce__calculator_1_1_force_calculator_a2fec2199bb6753d75d89fadd0383df32}} 
+\index{force\_calculator.ForceCalculator@{force\_calculator.ForceCalculator}!current\_velocity@{current\_velocity}}
+\index{current\_velocity@{current\_velocity}!force\_calculator.ForceCalculator@{force\_calculator.ForceCalculator}}
+\doxysubsubsection{\texorpdfstring{current\_velocity}{current\_velocity}}
+{\footnotesize\ttfamily force\+\_\+calculator.\+Force\+Calculator.\+current\+\_\+velocity}
+
+\mbox{\Hypertarget{classforce__calculator_1_1_force_calculator_add506966efa25b8403ea4ddbd66032c6}\label{classforce__calculator_1_1_force_calculator_add506966efa25b8403ea4ddbd66032c6}} 
+\index{force\_calculator.ForceCalculator@{force\_calculator.ForceCalculator}!dvl\_subscriber@{dvl\_subscriber}}
+\index{dvl\_subscriber@{dvl\_subscriber}!force\_calculator.ForceCalculator@{force\_calculator.ForceCalculator}}
+\doxysubsubsection{\texorpdfstring{dvl\_subscriber}{dvl\_subscriber}}
+{\footnotesize\ttfamily force\+\_\+calculator.\+Force\+Calculator.\+dvl\+\_\+subscriber}
+
+
+
+Subscriber to the D\+VL topic, used to get the current velocity. 
+
+\mbox{\Hypertarget{classforce__calculator_1_1_force_calculator_a668f8a526b54b4cb544fc3235cfef6d8}\label{classforce__calculator_1_1_force_calculator_a668f8a526b54b4cb544fc3235cfef6d8}} 
+\index{force\_calculator.ForceCalculator@{force\_calculator.ForceCalculator}!min\_distance@{min\_distance}}
+\index{min\_distance@{min\_distance}!force\_calculator.ForceCalculator@{force\_calculator.ForceCalculator}}
+\doxysubsubsection{\texorpdfstring{min\_distance}{min\_distance}}
+{\footnotesize\ttfamily force\+\_\+calculator.\+Force\+Calculator.\+min\+\_\+distance}
+
+
+
+Variable to store the minimum distance between the A\+UV and the obstacles used to compute the repulsive force. 
+
+\mbox{\Hypertarget{classforce__calculator_1_1_force_calculator_a86b672173eb7214b52d24679e97da056}\label{classforce__calculator_1_1_force_calculator_a86b672173eb7214b52d24679e97da056}} 
+\index{force\_calculator.ForceCalculator@{force\_calculator.ForceCalculator}!repulsive\_gain@{repulsive\_gain}}
+\index{repulsive\_gain@{repulsive\_gain}!force\_calculator.ForceCalculator@{force\_calculator.ForceCalculator}}
+\doxysubsubsection{\texorpdfstring{repulsive\_gain}{repulsive\_gain}}
+{\footnotesize\ttfamily force\+\_\+calculator.\+Force\+Calculator.\+repulsive\+\_\+gain}
+
+
+
+Variable to store the repulsive gain, which is used to scale the repulsive force. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{force__calculator_8py}{force\+\_\+calculator.\+py}}\end{DoxyCompactItemize}
