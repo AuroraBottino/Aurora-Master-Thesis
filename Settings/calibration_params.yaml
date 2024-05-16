@@ -1,0 +1,73 @@
+# Multi-camera calibration matrices (M_c)
+# rotation elements are in cayley parametrization
+CameraSystem_nrCams: 6
+# Real pose of the camera in the robot structure
+cam_origin_pose_x: 0.05
+cam_origin_pose_y: 0.0
+cam_origin_pose_z: 1.0
+# camera_0
+CameraSystem_cam1_1: -0.000486145179002   #r1
+CameraSystem_cam1_2: 0.9969892501         #r2
+CameraSystem_cam1_3: 0.00265291221163     #r3
+CameraSystem_cam1_4: 0.0412020608783      #t1
+CameraSystem_cam1_5: -0.00105956988409    #t2
+CameraSystem_cam1_6: -0.0619566850364     #t3
+Camera_pinhole_fx_cam1: 547.696
+Camera_pinhole_fy_cam1: 547.696
+Camera_pinhole_px_cam1: 403.5
+Camera_pinhole_py_cam1: 307.5
+# camera_1
+CameraSystem_cam2_1: 0.727932603987       #r1
+CameraSystem_cam2_2: 0.999221986944       #r2
+CameraSystem_cam2_3: -0.723358485965      #r3
+CameraSystem_cam2_4: 0.0139977531508      #t1
+CameraSystem_cam2_5: -0.0412108562887     #t2
+CameraSystem_cam2_6: -0.0613625980914     #t3
+Camera_pinhole_fx_cam2: 547.696
+Camera_pinhole_fy_cam2: 547.696
+Camera_pinhole_px_cam2: 403.5
+Camera_pinhole_py_cam2: 307.5
+# camera_2    
+CameraSystem_cam3_1: 3.09602460426        #r1
+CameraSystem_cam3_2: 1.01326318314        #r2
+CameraSystem_cam3_3: -3.0892658153        #r3
+CameraSystem_cam3_4: -0.0314168445766     #t1
+CameraSystem_cam3_5: -0.0257328543812     #t2
+CameraSystem_cam3_6: -0.0623426139355     #t3
+Camera_pinhole_fx_cam3: 547.696
+Camera_pinhole_fy_cam3: 547.696
+Camera_pinhole_px_cam3: 403.5
+Camera_pinhole_py_cam3: 307.5
+# camera_3
+CameraSystem_cam4_1: -3.07631607816       #r1
+CameraSystem_cam4_2: 0.990853500341       #r2
+CameraSystem_cam4_3: 3.05534364428        #r3
+CameraSystem_cam4_4: -0.0308502204716     #t1
+CameraSystem_cam4_5: 0.0217360928655      #t2
+CameraSystem_cam4_6: -0.0613514855504     #t3
+Camera_pinhole_fx_cam4: 547.696
+Camera_pinhole_fy_cam4: 547.696
+Camera_pinhole_px_cam4: 403.5
+Camera_pinhole_py_cam4: 307.5
+# camera_4
+CameraSystem_cam5_1: -0.725831306705      #r1
+CameraSystem_cam5_2: 0.997006823993       #r2
+CameraSystem_cam5_3: 0.729429715644       #r3
+CameraSystem_cam5_4: 0.014820783399       #t1
+CameraSystem_cam5_5: 0.0391003079712      #t2
+CameraSystem_cam5_6: -0.0614402554929     #t3
+Camera_pinhole_fx_cam5: 547.696
+Camera_pinhole_fy_cam5: 547.696
+Camera_pinhole_px_cam5: 403.5
+Camera_pinhole_py_cam5: 307.5
+# camera_5
+CameraSystem_cam6_1: 0.00151784636811     #r1
+CameraSystem_cam6_2: -0.000528009891659   #r2
+CameraSystem_cam6_3: 0.000653302871975    #r3
+CameraSystem_cam6_4: 0.000798999972176    #t1
+CameraSystem_cam6_5: -0.0010379999876     #t2
+CameraSystem_cam6_6: 0                    #t3
+Camera_pinhole_fx_cam6: 316.52
+Camera_pinhole_fy_cam6: 316.52
+Camera_pinhole_px_cam6: 403.5
+Camera_pinhole_py_cam6: 307.5
