@@ -126,6 +126,8 @@ class PointCloudFeatureMatcher:
         ## \brief Variable to store the maximum number of obstacles to consider inside the minimun distance to the robot in order to compute the repulsive force, which is equal to 10
         self.max_obstacles = 10
         
+        self.new_timestamp_vector = []
+        
         ## \brief Variable to store the alpha parameter, which is used to scale the direction of the repulsive force. If alpha = 0, the repulsive force is computed only considering only the direction of motion. If alpha = 1, the repulsive force is computed only considering the direction of the obstacles. By changing the value of alpha, the repulsive force can be computed considering both the direction of motion and the direction of the obstacles.
         self.alpha = 0.5 
         ## \brief Variable to store the beta parameter, which is used to scale the risk factor. If beta = 0, the repulsive force is computed without considering the risk factor. If beta = 1, the repulsive force is computed only considering the risk factor. By changing the value of beta, the repulsive force can be computed considering both the risk factor and the repulsive force.
@@ -262,6 +264,7 @@ class PointCloudFeatureMatcher:
         if self.current_timestamp is not None:
             self.previous_timestamp = self.current_timestamp
         self.current_timestamp = new_timestamp 
+        
 
         # Extract the camera pose from the message and update the current and last camera poses
         cam_world_pose = np.array(msg.cam_world_pose).reshape((4, 4))
@@ -436,20 +439,22 @@ class PointCloudFeatureMatcher:
             risktocolormap = self.risk_calculator.risk_to_colormap(riskfactor, obstacle_centroids)
 
            #REPULSIVE FORCE
-            repulsive_force_risk = self.force_calculator.repulsive_force(current_velocity, 
+            repulsive_force = self.force_calculator.repulsive_force(current_velocity, 
             obstacle_centroids, obstacle_normals, self.points_on_auv, self.min_distance, self.alpha, 
             self.repulsive_gain, 0.0, self.max_obstacles, risk_factor_all_points)
-         
-            repulsive_force = self.force_calculator.repulsive_force(current_velocity,
-            obstacle_centroids, obstacle_normals, self.points_on_auv, self.min_distance, self.alpha,
-            self.repulsive_gain, 1.0 , self.max_obstacles, risk_factor_all_points)
 
-     
+            self.new_timestamp_vector.append(new_timestamp.to_sec())
+         
+            # repulsive_force = self.force_calculator.repulsive_force(current_velocity,
+            # obstacle_centroids, obstacle_normals, self.points_on_auv, self.min_distance, self.alpha,
+            # self.repulsive_gain, 1.0 , self.max_obstacles, risk_factor_all_points)
+
+
             if len(repulsive_force) == 2:
                 repulsive_force, points_within_min_distance = repulsive_force
 
             self.visualization_class.visualize_repulsive_force(current_position, repulsive_force, self.repulsive_force_publisher, ColorRGBA(1.0, 1.0, 0.0, 1.0))
-            self.visualization_class.visualize_repulsive_force(current_position, repulsive_force_risk, self.repulsive_force_risk_publisher, ColorRGBA(1.0, 0.5, 0.0, 1.0))
+          #  self.visualization_class.visualize_repulsive_force(current_position, repulsive_force_risk, self.repulsive_force_risk_publisher, ColorRGBA(1.0, 0.5, 0.0, 1.0))
 
             processed_point_cloud = self.visualization_class.publish_pointcloud(cloud_points)
             self.currentpointcloud_publisher.publish(processed_point_cloud)
@@ -468,6 +473,7 @@ class PointCloudFeatureMatcher:
             self.visualization_class.create_point5_marker(5, self.points_on_auv)
             self.visualization_class.create_point6_marker(6, self.points_on_auv)
 
+            self.save_minimum_distances_from_obstacles()
             self.save_distances()
 
             # plt.figure()
@@ -477,6 +483,12 @@ class PointCloudFeatureMatcher:
         self.processed_clouds_count += 1
         self.previous_cloud_points = cloud_points
 
+    def save_minimum_distances_from_obstacles(self):
+        
+        total_minimum_distances_from_obstacles = np.column_stack((self.new_timestamp_vector, self.force_calculator.closest_distances_to_obstacles))
+        df = pd.DataFrame(total_minimum_distances_from_obstacles, columns=['timestamp', 'closest distances to obstacles'])
+        filename = "/home/user/catkin_ws/src/collision_aurora/src/closest_distances_to_obstacles.csv"
+        df.to_csv(filename, index=False)
 
 
     def save_distances(self):

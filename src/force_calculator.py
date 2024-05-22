@@ -22,6 +22,8 @@ class ForceCalculator:
         ## \brief Subscriber to the DVL topic, used to get the current velocity
         self.dvl_subscriber = rospy.Subscriber('/girona500/navigator/dvl', DVL, self.dvl_callback)
 
+        self.closest_distances_to_obstacles = []
+
     
     def dvl_callback(self, msg): 
         """
@@ -59,6 +61,12 @@ class ForceCalculator:
 
         directions = points_on_auv[:, None] - obstacle_centroids   # num_auv_points x num_obstacles x 3
         distances = np.linalg.norm(directions, axis=2)             # num_auv_points x num_obstacles
+        minimum_distances = np.min(distances, axis=0)   # num_obstacles x 1
+        sorted_distances = np.sort(minimum_distances)[:10]
+        mean_sorted_distances = np.mean(sorted_distances)
+        self.closest_distances_to_obstacles.append(mean_sorted_distances)
+                       
+
         dot_products = np.dot(obstacle_normals, current_velocity)  # num_obstacles x 1 
 
         # calculate repulsive forces and directions 
